@@ -39,7 +39,7 @@ services:
       # Entrypoint has script to validate that database is ready
       - fminames-db
       - redis-db
-    restart: "unless-stopped" 
+#    restart: "unless-stopped" 
     volumes:
       - ../config:/home/smartmet/config:Z
       - ../share:/home/smartmet/share:Z
@@ -95,9 +95,8 @@ services:
     container_name: ssl-proxy
     restart: always
     environment:
-      UPSTREAM: 185.213.74.67:8080
-      SERVERNAME: sm1.harvesterseasons.com
-      #EXTRANAMES: harvesterseasons.com #,smdev.harvesterseasons.com
+      UPSTREAM: 193.167.135.55:8080
+      SERVERNAME: smart.nsdc.fmi.fi
     ports:
       - "80:80"
       - "443:443"

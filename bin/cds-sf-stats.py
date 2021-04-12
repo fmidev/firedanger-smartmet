@@ -30,15 +30,16 @@ c.retrieve(
         ],
         'product_type': [
 #            'ensemble_mean', 'hindcast_climate_mean', 'monthly_maximum','monthly_minimum',
-            'monthly_mean', 'monthly_standard_deviation',
+            'monthly_mean', #'monthly_standard_deviation',
         ],
         'month': mon,
         'leadtime_month': [
             '1', '2', '3',
             '4', '5', '6',
         ],
-        'area': [ 75, -30, 25, 50
-        ],
+# euro        'area': [ 75, -30, 25, 50 ],
+# sam        
+        'area': [ -10, -80, -60, -50 ],
         'year': years,
     },
-    '/home/smartmet/data/ens/ec-sf-%s-stats-%s-euro-fcmean.grib'%(year,mon))
+    '/data/ens/ec-sf_%s_stats_%s_fcmean-sam.grib'%(year,mon))

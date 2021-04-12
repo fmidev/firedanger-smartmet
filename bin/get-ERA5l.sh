@@ -12,9 +12,9 @@ else
     year=$(date -d '3 months ago' +%Y)
     month=$(date -d '3 months ago' +%m)
 fi
-cd /home/smartmet/data
+cd /data
 echo "y: $year m: $month"
-cds-era5l.py $year $month
+/home/users/smartmet/bin/cds-era5l.py $year $month
 
-mv era5l-$year$month-sfc-12h.grib grib/ERA5L_${year}0101T000000_$year${month}01T000000_euro_1h.grib
+mv era5l-$year$month-sfc-12h.grib grib/ERA5L_${year}0101T000000_$year${month}01T000000_sam_1h.grib
 #sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0

@@ -57,6 +57,8 @@ EXPOSE 8080
 #COPY smartmetconf /etc/smartmet
 #COPY wms /smartmet/share/wms
 #COPY docker-entrypoint.sh /
+RUN groupadd -r -g 5700 smartmet
+RUN useradd -r -u 4516 -g smartmet smartmet
 
 # wms.conf defines imagecache. timeseriescache's use is yet to be found.
 # MS 6.3.20: from new Rauhala dockerhub code
@@ -66,7 +68,6 @@ RUN mkdir -p /var/smartmet/timeseriescache /var/smartmet/imagecache /var/smartme
 
 # M.K. 09.01.2020: adopted it to WEkEO paths 
 RUN mkdir -p /srv/data
-RUN useradd -r -u 1001 smartmet
 # M.K. 09.01.2020: /srv/grid-data adopted to WEkEO setting
 #                  other paths are not created in step before TODO check!
 RUN chown -R smartmet /srv/data /var/log/smartmet /var/smartmet/timeseriescache /var/smartmet/imagecache
@@ -75,7 +76,7 @@ RUN chown -R smartmet /srv/data /var/log/smartmet /var/smartmet/timeseriescache 
 # These locations are required to be defined in several different setting files under the config-direcotry
 # M.K. 09.01.2020: do I have to change something here? Dockerfile is aborting here.
 COPY scripts /home/smartmet/scripts 
-RUN chown -R smartmet /home/smartmet/scripts
+RUN chown -R smartmet /home/smartmet/*
 
 # Dont use root to run commands in container
 USER smartmet

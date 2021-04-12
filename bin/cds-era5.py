@@ -12,7 +12,7 @@ c.retrieve(
     {
         'product_type':'reanalysis',
         'format':'grib',
-	    'area' : '75/-30/25/50',
+	    'area' : '-10/-80/-60/-50',
         'variable':[
             '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_dewpoint_temperature',
             '2m_temperature', 'evaporation', 'high_vegetation_cover',
@@ -39,4 +39,4 @@ c.retrieve(
                         '21:00', '22:00', '23:00',
         ]
     },
-    '/home/smartmet/data/ERA5_{:0>4}{:0>2}{:0>2}T000000_base+soil.grib'.format(year,month,day))
+    '/data/ERA5_{:0>4}{:0>2}{:0>2}T000000_base+soil-sam.grib'.format(year,month,day))
