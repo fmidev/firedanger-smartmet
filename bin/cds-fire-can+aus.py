@@ -39,5 +39,5 @@ c.retrieve(
         ],
         'product_type': 'reanalysis',
     },
-    '/home/smartmet/data/fire/fwi_{:0>4}_can+aus.zip'.format(year)
+    '/data/fire/fwi_{:0>4}_can+aus.zip'.format(year)
 )

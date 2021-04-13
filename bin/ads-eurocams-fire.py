@@ -1,5 +1,4 @@
-#!/home/smartmet/anaconda3/envs/xr/bin/python
-#/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 import cdsapi
 if ( len(sys.argv) > 2):
@@ -7,10 +6,10 @@ if ( len(sys.argv) > 2):
     month= sys.argv[2]
     day= sys.argv[3]
 
-c = cdsapi.Client(url="https://ads.atmosphere.copernicus.eu/api/v2" , 
-key="1990:211cb5c3-3923-4f49-a5cd-214a4c3bc2b0"
-)
+with open('/home/users/smartmet/.camsapirc', 'r') as f:
+        credentials = yaml.safe_load(f)
 
+c = cdsapi.Client(url=credentials['url'], key=credentials['key'])
 c.retrieve(
     'cams-europe-air-quality-forecasts',
     {

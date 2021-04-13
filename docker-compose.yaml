@@ -95,7 +95,7 @@ services:
     container_name: ssl-proxy
     restart: always
     environment:
-      UPSTREAM: 193.167.135.55:8080
+      UPSTREAM: 172.18.0.5:8080
       SERVERNAME: smart.nsdc.fmi.fi
     ports:
       - "80:80"
