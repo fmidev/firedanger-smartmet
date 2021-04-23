@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-# copy zip with fire indices netcdf to yearly grib
+# copy -setmissval,9999 zip with fire indices netcdf to yearly grib
+eval "$(conda shell.bash hook)"
+conda activate xr
 cd /data/fire
 [ ! -f ECMWF_MARK5_KBDI_${1:4:4}1231_1200_hr_v3.1_con.nc ] && unzip -q $1 || echo "no $1 or unzip done already"
 
@@ -15,7 +17,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,ffmcode "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,ffmcode "\1" "\2"/' | bash \
 && cat ECFWI_*_FFMC*.grib > ../grib/ECFWI_${1:4:4}1231T120000_FFMC_hr_v3.1_con.grib &
 
 ls ECMWF_FWI_ISI_${1:4:4}*.nc | sed '
@@ -29,7 +31,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,infsinx "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,infsinx "\1" "\2"/' | bash \
 && cat ECFWI_*_ISI*.grib > ../grib/ECFWI_${1:4:4}1231T120000_ISI_hr_v3.1_con.grib &
 
 ls ECMWF_FWI_BUI_${1:4:4}*.nc | sed '
@@ -43,7 +45,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,fbupinx "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,fbupinx "\1" "\2"/' | bash \
 && cat ECFWI_*_BUI*.grib > ../grib/ECFWI_${1:4:4}1231T120000_BUI_hr_v3.1_con.grib &
 
 ls ECMWF_FWI_DMC_${1:4:4}*.nc | sed '
@@ -57,7 +59,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,dufmcode "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,dufmcode "\1" "\2"/' | bash \
 && cat ECFWI_*_DMC*.grib > ../grib/ECFWI_${1:4:4}1231T120000_DMC_hr_v3.1_con.grib &
 
 ls ECMWF_FWI_DC_${1:4:4}*.nc | sed '
@@ -71,7 +73,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,drtcode "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,drtcode "\1" "\2"/' | bash \
 && cat ECFWI_*_DC*.grib > ../grib/ECFWI_${1:4:4}1231T120000_DC_hr_v3.1_con.grib &
 
 ls ECMWF_FWI_DSR_${1:4:4}*.nc | sed '
@@ -85,7 +87,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,fdsrte "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,fdsrte "\1" "\2"/' | bash \
 && cat ECFWI_*_DSR*.grib > ../grib/ECFWI_${1:4:4}1231T120000_DSR_hr_v3.1_con.grib &
 
 ls ECMWF_FWI_FWI_${1:4:4}*.nc | sed '
@@ -99,7 +101,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,fwinx "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,fwinx "\1" "\2"/' | bash \
 && cat ECFWI_*_FWI*.grib > ../grib/ECFWI_${1:4:4}1231T120000_FWI_hr_v3.1_con.grib &
 
 ls ECMWF_MARK5_KBDI_${1:4:4}*.nc | sed '
@@ -113,7 +115,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,kbdi "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,kbdi "\1" "\2"/' | bash \
 && cat ECMARK5_*_KBDI*.grib > ../grib/ECMARK5_${1:4:4}1231T120000_KBDI_hr_v3.1_con.grib &
 
 ls ECMWF_MARK5_FDI_${1:4:4}*.nc | sed '
@@ -127,7 +129,7 @@ s:\.nc:\.grib:
 #Bring the original filename back
 x
 G
-s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setltype,1 -setname,fdimrk "\1" "\2"/' | bash \
+s/^\(.*\)\n\(.*\)$/cdo -f grb2 -b P16 -s copy -setmissval,9999 -setltype,1 -setname,fdimrk "\1" "\2"/' | bash \
 && cat ECMARK5_*_FDI*.grib > ../grib/ECMARK5_${1:4:4}1231T120000_FDI_hr_v3.1_con.grib &
 wait
 rm ECMWF_*.nc ECFWI_*.grib ECMARK5_*.grib
