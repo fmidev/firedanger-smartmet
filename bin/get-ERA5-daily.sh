@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 #
 # monthly script for fetching ERA5 Land reanalysis data from cdsapi, cutting out the Nordic domain
 # and setting it up in the smartmet-server

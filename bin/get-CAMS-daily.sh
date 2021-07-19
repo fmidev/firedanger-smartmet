@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 #
 # monthly script for fetching CAMS forecast data from cdsapi, cutting out the Nordic domain
 # and setting it up in the smartmet-server

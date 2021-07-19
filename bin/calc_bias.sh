@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 # cmd line parameters are observation timeseries file and model timeseries file
 # files are assumed to have same timesteps, run this in ~/data dir
 eval "$(conda shell.bash hook)"
