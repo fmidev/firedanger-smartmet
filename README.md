@@ -1,9 +1,8 @@
 
-# SmartMet-server for Harvester Sesaons service
+# SmartMet-server for Hackathon in Chile
 
-Mainly for showing ERA5 Land grib datasets and HOPS hydrological forecasts from seasonal and weather forecast data.
-This entails a mix of GRID and non-grid smartmet-server plugins to run. It is now being run on a WEkEO cloud server running Ubuntu.
-... let's see how it works:
+Mainly for showing ERA5 Land grib datasets and seasonal and weather forecast data.
+This entails a GRID  smartmet-server and related plugins to run. ... let's see how it works:
 
 First prepare a data directory at the same level as this cloned directory (../data) and `ln -s smartmet-server/config ../config`
 Then you can let docker-compose build and run everything else.
@@ -97,20 +96,6 @@ is needed to complete the job successfully. This was used for real, last step is
 As only soil temperature level 1 is available in seasonal forecasts, the deeper temperatures on level 2, 3 and 4 are prodcued by using the
 ERA5L monthly statistics from 2000-2019 to give each gridpoint the relation between stl1 and the deeper temperatures. The forecasted stl1 with bias adjustement is used to produce level 2,3,4 temperatures. This data set will be used to demonstrate the added value from using HOPS.
 * `seq 0 50 |parallel -j 16 --compress --tmpdir tmp/ cdo --eccodes add -seldate,2020-04-02,2020-11-02 -inttime,2020-04-02,00:00:00,1days -shifttime,1year -selvar,stl1,stl2,stl3 era5l-stls-diff-climate.grib -add -seldate,2020-04-02,2020-11-02 -inttime,2020-04-02,00:00:00,1days -shifttime,1year -selvar,stl1 era5l-ecsf_2000-2019_bias-monthly.grib -remapbil,era5l-nordic-grid -selvar,stl1 ens/ec-sf_20200402_all-24h-nordic-{}.grib ens/ec-bsf_20200402_stl-24h-nordic-{}.grib`
-
-The EC-BSF bias adjusted data set is then used to force the HOPS model.
-
-HOPS model operation is described in [github:fmidev/hops](https://github/fmidev/hops)
-
-### HOPS output transformation to grib
-
-The HOPS model produces CF conform netCDF as output that has to be turned into smartmet-server grib files under the ~/data/grib directory structure.
-This is achieved by running the command 
-
-`bin/hops-cf_to_grib.sh hops_ens_cf_2020-04-02.nc'
-
-it uses cdo and grib_set command line commands to turn the HOPS output into grib variables and turns the Lambert-Azimtuhal-Equal-Area projection into a regular lat
-lon projection over the same area.
 
 To be available as addressable variables the grib variables need to be mapped into SmartMet-server FMI-IDs or newbase names.
 A general guide explaining this is under [DATAMAPPING](DATAMAPPING.md).
