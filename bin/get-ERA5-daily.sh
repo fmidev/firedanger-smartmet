@@ -21,4 +21,4 @@ echo "fetch ERA5 for y: $year m: $month d: $day"
 #conda activate xr
 /home/users/smartmet/anaconda3/envs/xr/bin/cdo --eccodes aexprf,ec-sde.instr ERA5_$year$month${day}T000000_base+soil-sam.grib grib/ERA5_${year}0101T000000_$year$month${day}T0000_base+soil-sam.grib
 rm ERA5_$year$month${day}T000000_base+soil-sam.grib
-sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0
+#sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0

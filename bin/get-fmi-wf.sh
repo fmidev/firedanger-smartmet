@@ -45,4 +45,4 @@ cdo --eccodes chparam,144.173.192,11.1.0 -add -mulc,0.001 grib/SMARTMET_${date:0
 # calculate snow depth obs from swe kriging data
 cdo --eccodes chparam,141.228,141.128 -mulc,0.01 fmi-smartmet-$ydate-sd-krg.grib grib/SMARTOBS_${date:0:4}0101T000000_${date}T0000_sde.grib
 mv fmi-smartmet-* smartmet/
-sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0
+#sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0
