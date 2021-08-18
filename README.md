@@ -2,9 +2,11 @@
 # SmartMet-server for Hackathon in Chile
 
 *Yleiskatsaus: mikä on smartmet server ja linkki lisäinfoon*
+
 SmartMet Server is a data and product server which provides acces to both observation and forecast data. It is used for data services and product generation. Smartmet Server can read input from various sources and it provides several ouput interfaces and formats. For more detailed description, see the [SmartMet Server wiki pages](https://github.com/fmidev/smartmet-server/wiki).
 
 *Yleiskatsaus: mikä tää sivusto on*
+
 SmartMet Server is used for the https://smart.nsdc.fmi.fi/grid-gui service, for Hackathon in Chile. This service is mainly for showing datasets from several producers (currently working: CAMS, ECB2SF, ECBSF, ECSF, ERA5). To download datasets shown on this service, the SmartMet Server TimeSeries plugin can be used. 
 
 *Kysymyksiä: pitääkö avata, mitä esim ECB2SF data on jne. ERA5 Land ei toimi?* 
@@ -12,9 +14,11 @@ SmartMet Server is used for the https://smart.nsdc.fmi.fi/grid-gui service, for 
 # Using the Timeseries API
 
 *Yleiskatsaus: mikä on timeseries api ja miten sitä käytetään tässä chilehommassa*
+
 The TimeSeries plugin can be used to fetch time series information for observation and forecast data, with specific time or time interval chosen by the user. The datasets can be downloaded with a HTTP request which contains the parameters needed to obtain the information, processing the results and formatting the output. For example, the following request fetches the *vaikka pm2.5* for the city of Santiago:
 
 *Huom tämä esimerkki on vielä päin prinkkalaa:*
+
 `https://smart.nsdc.fmi.fi/timeseries?producer=CAMS&lonlat=-70.67,-33.45&format=debug&param=name,time,pm2.5&starttime=`
 
 The service location that starts the HTTP request query is **smart.nsdc.fmi.fi**, and the parameters following it are given as name-value pairs separated by the ampersand (&) character. An example response for this query is shown below: 
