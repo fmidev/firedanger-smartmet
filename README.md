@@ -33,7 +33,7 @@ Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way 
 
 *Ei tule nättiä, mutta tulee sentään jotain. Korjaa* 
 
-`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:HSNOW-M&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=2000&20210919T000000&CRS=EPSG:4326&BBOX=-90,-180,90,179`
+`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:HSNOW-M&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=2000&WIDTH=1000&20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60`
 
 The available 'LAYERS' can be checked with the GetCapabilities request as follows: 
 
