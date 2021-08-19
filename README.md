@@ -27,6 +27,24 @@ The service location that starts the HTTP request query is **smart.nsdc.fmi.fi**
 
 For more information and examples of the usage of the TimeSeries plugin, see SmartMet Server [Timeseries-plugin Wiki pages](https://github.com/fmidev/smartmet-plugin-timeseries/wiki). 
 
+# Using the WMS plugin 
+
+Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. An example WMS reguest to the server (ECBSF surface snow thickness): 
+
+*Ei tule nättiä, mutta tulee sentään jotain. Korjaa* 
+
+`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:HSNOW-M&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=2000&20210919T000000&CRS=EPSG:4326&BBOX=-90,-180,90,179`
+
+The available 'LAYERS' can be checked with the GetCapabilities request as follows: 
+
+`https://smart.nsdc.fmi.fi/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+
+A response for the previous example query is shown below: 
+
+*Kuva*
+
+For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
+
 # Aiemmat tekstit: 
 
 Mainly for showing ERA5 Land grib datasets and seasonal and weather forecast data.
