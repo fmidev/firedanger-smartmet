@@ -40,8 +40,8 @@ For more information about the WMS plugin, see for example [SmartMet plugin WMS 
 
 # Using the Download/WFS API
 
-# Aiemmat tekstit: 
-
+# HUOM MIKKO aiemmat tekstit on kommentoituna ulos! 
+<!---
 Mainly for showing ERA5 Land grib datasets and seasonal and weather forecast data.
 This entails a GRID  smartmet-server and related plugins to run. ... let's see how it works:
 
@@ -156,3 +156,4 @@ Example:
 A big thanks to this citation for using parallel a lot:
   O. Tange (2011): GNU Parallel - The Command-Line Power Tool,
   ;login: The USENIX Magazine, February 2011:42-47.
+-->
