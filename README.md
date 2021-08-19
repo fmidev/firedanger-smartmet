@@ -16,7 +16,7 @@ The service location that starts the HTTP request query is **smart.nsdc.fmi.fi**
 
 An example response for this query is shown below: 
 
-*Tähän kuva tuloksesta*
+![alt text](https://github.com/annikanni/kuvatestaus/blob/main/Screenshot%202021-08-19%20at%2017-33-35%20Debug%20mode%20output.png)
 
 For more information and examples of the usage of the TimeSeries plugin, see SmartMet Server [Timeseries-plugin Wiki pages](https://github.com/fmidev/smartmet-plugin-timeseries/wiki). 
 
