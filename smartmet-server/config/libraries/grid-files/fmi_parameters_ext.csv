@@ -115,3 +115,6 @@
 1457050;1;P50OSTL2-C;C;Organic Soil Temperature in Layer 2 in Celsius;1;1;1;1;
 1458350;1;P50OSTL3-C;C;Organic Soil Temperature in Layer 3 in Celsius;1;1;1;1;
 1453650;1;P50OSTL4-C;C;Organic Soil Temperature in Layer 4 in Celsius;1;1;1;1;
+
+# New parameters for the Hackathon in Chile service (TESTING!)
+210073;1;PM2P5-KGM3;KGM3;Particulate matter d<2.5Um;;;;;
