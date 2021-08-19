@@ -38,6 +38,8 @@ A response for the previous example query is shown below:
 
 For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
 
+# Using the Download/WFS API
+
 # Aiemmat tekstit: 
 
 Mainly for showing ERA5 Land grib datasets and seasonal and weather forecast data.
