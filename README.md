@@ -10,6 +10,8 @@ For example web app code using a smartmet-server check out the https://github.co
 
 The TimeSeries plugin can be used to fetch time series information for observation and forecast data, with specific time or time interval chosen by the user. The datasets can be downloaded with a HTTP request which contains the parameters needed to obtain the information, processing the results and formatting the output. For example, the following request fetches the 'particulate matter d<2.5 um' for the city of Santiago:
 
+*Mäppäyksen jälkeen vaihda param-nimi:*
+
 `https://smart.nsdc.fmi.fi/timeseries?producer=CAMS&lonlat=-70.67,-33.45&format=debug&param=name,time,GRIB-210073:CAMS:6002:1:0:1:0&starttime=20210812T000000&precision=full`
 
 The service location that starts the HTTP request query is **smart.nsdc.fmi.fi**, and the parameters following it are given as name-value pairs separated by the ampersand (&) character. (Hint: copy the FMI key from the https://smart.nsdc.fmi.fi/grid-gui service for the parameter definition 'param'.)
@@ -20,19 +22,19 @@ An example response for this query is shown below:
 
 For more information and examples of the usage of the TimeSeries plugin, see SmartMet Server [Timeseries-plugin Wiki pages](https://github.com/fmidev/smartmet-plugin-timeseries/wiki). 
 
-# Using the WMS plugin for maps and images
+# Using the WMS/Dali plugin for images
 
-Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. An example WMS reguest to the server (ECBSF surface snow thickness): 
+Dali is the engine to make images from smartmet-server internal data. It can be used directly or with appropriate layer definitions can provide an OGC compliant WebMapService interface. Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. An example Dali reguest to the server (ECBSF surface snow thickness): 
 
-`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:soiltemp&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=500&TIME=20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60`
+`https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000`
 
-The available 'LAYERS' can be checked with the GetCapabilities request as follows: 
+Available WMS 'LAYERS' can be checked with the GetCapabilities request as follows: 
 
 `https://smart.nsdc.fmi.fi/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
 
-A response for the previous example query is shown below: 
+A response for the previous example query is shown below. The dali product urls can be copied from the grid-gui page by changing a parameters Presentation menu to Dali and copying the image urls. The time setting can be used to make an animation that loads consequitive time steps.
 
-![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:soiltemp&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=500&TIME=20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60)
+![WMS layer](https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000)
 
 For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
 
