@@ -1,9 +1,48 @@
+# SmartMet-server for Hackathon in Chile
 
-# SmartMet-server for Harvester Sesaons service
+SmartMet Server is a data and product server which provides acces to both observation and forecast data. It is used for data services and product generation. Smartmet Server can read input from various sources and it provides several ouput interfaces and formats. For more detailed description, see the [SmartMet Server wiki pages](https://github.com/fmidev/smartmet-server/wiki).
 
-Mainly for showing ERA5 Land grib datasets and HOPS hydrological forecasts from seasonal and weather forecast data.
-This entails a mix of GRID and non-grid smartmet-server plugins to run. It is now being run on a WEkEO cloud server running Ubuntu.
-... let's see how it works:
+SmartMet Server purpose is a service to make data available directly to web apps without needing any data downloading and processing steps on a server. You can directly write javascript web apps to use Copernicus data for the Chile Hackathon. To get a feel for the data offered https://smart.nsdc.fmi.fi/grid-gui is a general data browser. For the Impacto Chile Hackathon you can get this data into your own app. This service has datasets from several producers (currently working: CAMS, ECB2SF, ECBSF, ECSF, ERA5). CAMS atmospheric composition model output is available every day for 5 day forcasts with hourly data. ECSF, ECB2SF and ECBSF seasonal forecasts are available once per month for 215 daily forecasts 7 months ahead. ERA5 is every day the reanalysis from 5 days ago. To utilize datasets shown on this service, the SmartMet Server TimeSeries plugin can be used.
+
+For example web app code using a smartmet-server check out the https://github.com/fmidev/harvesterseasons-site repository and check out the service https://harvesterseasons.com.
+
+# Using the Timeseries API for data in table format
+
+The TimeSeries plugin can be used to fetch time series information for observation and forecast data, with specific time or time interval chosen by the user. The datasets can be downloaded with a HTTP request which contains the parameters needed to obtain the information, processing the results and formatting the output. For example, the following request fetches the 'particulate matter d<2.5 um' for the city of Santiago:
+
+<!---*Mäppäyksen jälkeen vaihda param-nimi:*-->
+
+`https://smart.nsdc.fmi.fi/timeseries?producer=CAMS&lonlat=-70.67,-33.45&format=debug&param=name,time,GRIB-210073:CAMS:6002:1:0:1:0&starttime=20210812T000000&precision=full`
+
+The service location that starts the HTTP request query is **smart.nsdc.fmi.fi**, and the parameters following it are given as name-value pairs separated by the ampersand (&) character. (Hint: copy the FMI key from the https://smart.nsdc.fmi.fi/grid-gui service for the parameter definition 'param'.)
+
+An example response for this query is shown below: 
+
+![timeseries output](https://github.com/annikanni/kuvatestaus/blob/main/Screenshot%202021-08-19%20at%2017-33-35%20Debug%20mode%20output.png)
+
+For more information and examples of the usage of the TimeSeries plugin, see SmartMet Server [Timeseries-plugin Wiki pages](https://github.com/fmidev/smartmet-plugin-timeseries/wiki). 
+
+# Using the WMS/Dali plugin for images
+
+Dali is the engine to make images from smartmet-server internal data. It can be used directly or with appropriate layer definitions can provide an OGC compliant WebMapService interface. Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. An example Dali reguest to the server (ECBSF ground temperature in Kelvins): 
+
+`https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000`
+
+Available WMS 'LAYERS' can be checked with the GetCapabilities request as follows: 
+
+`https://smart.nsdc.fmi.fi/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+
+A response for the previous example query is shown below. The dali product urls can be copied from the grid-gui page by changing a parameters Presentation menu to Dali and copying the image urls. The time setting can be used to make an animation that loads consequitive time steps.
+
+![WMS layer](https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000)
+
+For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
+
+<!---
+# Using the Download/WFS API
+
+Mainly for showing ERA5 Land grib datasets and seasonal and weather forecast data.
+This entails a GRID  smartmet-server and related plugins to run. ... let's see how it works:
 
 First prepare a data directory at the same level as this cloned directory (../data) and `ln -s smartmet-server/config ../config`
 Then you can let docker-compose build and run everything else.
@@ -98,20 +137,6 @@ As only soil temperature level 1 is available in seasonal forecasts, the deeper 
 ERA5L monthly statistics from 2000-2019 to give each gridpoint the relation between stl1 and the deeper temperatures. The forecasted stl1 with bias adjustement is used to produce level 2,3,4 temperatures. This data set will be used to demonstrate the added value from using HOPS.
 * `seq 0 50 |parallel -j 16 --compress --tmpdir tmp/ cdo --eccodes add -seldate,2020-04-02,2020-11-02 -inttime,2020-04-02,00:00:00,1days -shifttime,1year -selvar,stl1,stl2,stl3 era5l-stls-diff-climate.grib -add -seldate,2020-04-02,2020-11-02 -inttime,2020-04-02,00:00:00,1days -shifttime,1year -selvar,stl1 era5l-ecsf_2000-2019_bias-monthly.grib -remapbil,era5l-nordic-grid -selvar,stl1 ens/ec-sf_20200402_all-24h-nordic-{}.grib ens/ec-bsf_20200402_stl-24h-nordic-{}.grib`
 
-The EC-BSF bias adjusted data set is then used to force the HOPS model.
-
-HOPS model operation is described in [github:fmidev/hops](https://github/fmidev/hops)
-
-### HOPS output transformation to grib
-
-The HOPS model produces CF conform netCDF as output that has to be turned into smartmet-server grib files under the ~/data/grib directory structure.
-This is achieved by running the command 
-
-`bin/hops-cf_to_grib.sh hops_ens_cf_2020-04-02.nc'
-
-it uses cdo and grib_set command line commands to turn the HOPS output into grib variables and turns the Lambert-Azimtuhal-Equal-Area projection into a regular lat
-lon projection over the same area.
-
 To be available as addressable variables the grib variables need to be mapped into SmartMet-server FMI-IDs or newbase names.
 A general guide explaining this is under [DATAMAPPING](DATAMAPPING.md).
 
@@ -130,3 +155,4 @@ Example:
 A big thanks to this citation for using parallel a lot:
   O. Tange (2011): GNU Parallel - The Command-Line Power Tool,
   ;login: The USENIX Magazine, February 2011:42-47.
+-->
