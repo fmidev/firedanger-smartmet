@@ -26,7 +26,7 @@ For more information and examples of the usage of the TimeSeries plugin, see Sma
 
 Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. An example WMS reguest to the server (ECBSF surface snow thickness): 
 
-`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:soiltemp&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=500&20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60`
+`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:soiltemp&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=500&TIME=20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60`
 
 The available 'LAYERS' can be checked with the GetCapabilities request as follows: 
 
@@ -34,7 +34,7 @@ The available 'LAYERS' can be checked with the GetCapabilities request as follow
 
 A response for the previous example query is shown below: 
 
-![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:soiltemp&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=500&20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60)
+![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:soiltemp&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1000&WIDTH=500&TIME=20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60)
 
 For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
 
