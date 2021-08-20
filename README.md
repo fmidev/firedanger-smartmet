@@ -18,7 +18,7 @@ The service location that starts the HTTP request query is **smart.nsdc.fmi.fi**
 
 An example response for this query is shown below: 
 
-![alt text](https://github.com/annikanni/kuvatestaus/blob/main/Screenshot%202021-08-19%20at%2017-33-35%20Debug%20mode%20output.png)
+![timeseries output](https://github.com/annikanni/kuvatestaus/blob/main/Screenshot%202021-08-19%20at%2017-33-35%20Debug%20mode%20output.png)
 
 For more information and examples of the usage of the TimeSeries plugin, see SmartMet Server [Timeseries-plugin Wiki pages](https://github.com/fmidev/smartmet-plugin-timeseries/wiki). 
 
@@ -34,7 +34,7 @@ The available 'LAYERS' can be checked with the GetCapabilities request as follow
 
 A response for the previous example query is shown below: 
 
-*Kuva*
+![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:HSNOW-M&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=2000&WIDTH=1000&20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60)
 
 For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
 
