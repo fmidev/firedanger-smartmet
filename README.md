@@ -2,9 +2,11 @@
 
 SmartMet Server is a data and product server which provides acces to both observation and forecast data. It is used for data services and product generation. Smartmet Server can read input from various sources and it provides several ouput interfaces and formats. For more detailed description, see the [SmartMet Server wiki pages](https://github.com/fmidev/smartmet-server/wiki).
 
-SmartMet Server is used for the https://smart.nsdc.fmi.fi/grid-gui service, for Hackathon in Chile. This service is mainly for showing datasets from several producers (currently working: CAMS, ECB2SF, ECBSF, ECSF, ERA5). To download datasets shown on this service, the SmartMet Server TimeSeries plugin can be used. 
+SmartMet Server is used for the https://smart.nsdc.fmi.fi/grid-gui service, for Hackathon in Chile. This service is mainly for showing datasets from several producers (currently working: CAMS, ECB2SF, ECBSF, ECSF, ERA5). CAMS atmospheric composition model output is available every day for 5 day forcasts with hourly data. ECSF, ECB2SF and ECBSF seasonal forecasts are available once per month for 215 daily forecasts 7 months ahead. ERA5 is every day the reanalysis from 5 days ago. To utilize datasets shown on this service, the SmartMet Server TimeSeries plugin can be used. In conclusion the purpose of this service is to make data available directly to web apps without needing any data downloading and processing steps on a server. You can directly write javascript web apps to use Copernicus data for the Chile Hackathon.
 
-# Using the Timeseries API
+For example web app code using a smartmet-server check out the https://github.com/fmidev/harvesterseasons-site repository.
+
+# Using the Timeseries API for data in table format
 
 The TimeSeries plugin can be used to fetch time series information for observation and forecast data, with specific time or time interval chosen by the user. The datasets can be downloaded with a HTTP request which contains the parameters needed to obtain the information, processing the results and formatting the output. For example, the following request fetches the 'particulate matter d<2.5 um' for the city of Santiago:
 
@@ -20,11 +22,9 @@ An example response for this query is shown below:
 
 For more information and examples of the usage of the TimeSeries plugin, see SmartMet Server [Timeseries-plugin Wiki pages](https://github.com/fmidev/smartmet-plugin-timeseries/wiki). 
 
-# Using the WMS plugin 
+# Using the WMS plugin for maps and images
 
 Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. An example WMS reguest to the server (ECBSF surface snow thickness): 
-
-*Ei tule nättiä, mutta tulee sentään jotain. Korjaa* 
 
 `https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=harvester:ecbsf:HSNOW-M&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=2000&WIDTH=1000&20210919T000000&CRS=EPSG:4326&BBOX=-70,-80,-10,-60`
 
@@ -38,10 +38,9 @@ A response for the previous example query is shown below:
 
 For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
 
+<!---
 # Using the Download/WFS API
 
-# HUOM MIKKO aiemmat tekstit on kommentoituna ulos! 
-<!---
 Mainly for showing ERA5 Land grib datasets and seasonal and weather forecast data.
 This entails a GRID  smartmet-server and related plugins to run. ... let's see how it works:
 
