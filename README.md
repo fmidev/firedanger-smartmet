@@ -10,8 +10,6 @@ For example web app code using a smartmet-server check out the https://github.co
 
 The TimeSeries plugin can be used to fetch time series information for observation and forecast data, with specific time or time interval chosen by the user. The datasets can be downloaded with a HTTP request which contains the parameters needed to obtain the information, processing the results and formatting the output. For example, the following request fetches the 'particulate matter d<2.5 um' for the city of Santiago:
 
-*Mäppäyksen jälkeen vaihda param-nimi:*
-
 `https://smart.nsdc.fmi.fi/timeseries?producer=CAMS&lonlat=-70.67,-33.45&format=debug&param=name,time,GRIB-210073:CAMS:6002:1:0:1:0&starttime=20210812T000000&precision=full`
 
 The service location that starts the HTTP request query is **smart.nsdc.fmi.fi**, and the parameters following it are given as name-value pairs separated by the ampersand (&) character. (Hint: copy the FMI key from the https://smart.nsdc.fmi.fi/grid-gui service for the parameter definition 'param'.)
