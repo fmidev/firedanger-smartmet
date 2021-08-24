@@ -31,7 +31,7 @@ An example WMS request to the server (ECBSF temperature in Kelvins):
 `https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:T-K&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1500&WIDTH=1000&20210902T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50`
 
 An example response for this query is shown below: 
-![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:T-K&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=1500&WIDTH=1000&20210902T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50)
+![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:T-K&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=150&WIDTH=100&20210902T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50)
 
 An example Dali request to the server (ECBSF ground temperature in Kelvins): 
 
