@@ -1,0 +1,22 @@
+{
+    "title": "ECB2SF Total precipitation in kg/m2",
+    "abstract": "Precipitation isobands",
+    "projection": {},
+    "producer": "ECB2SF",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/precipitation_new.json",
+	    "css": "isobands/precipitation_new.css",
+	    "parameter": "RR-KGM2:ECB2SF::1:0:1:0",
+	    "sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

@@ -1,0 +1,22 @@
+{
+    "title": "ECB2SF Temperature in Kelvins",
+    "abstract": "Temperature isobands every two degrees",
+    "projection": {},
+    "producer": "ECBSF",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/temperature_K.json",
+	    "css": "isobands/temperature.css",
+	    "parameter": "T-K:ECB2SF::1:0:1:0",
+	    "sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

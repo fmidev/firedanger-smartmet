@@ -116,5 +116,36 @@
 1458350;1;P50OSTL3-C;C;Organic Soil Temperature in Layer 3 in Celsius;1;1;1;1;
 1453650;1;P50OSTL4-C;C;Organic Soil Temperature in Layer 4 in Celsius;1;1;1;1;
 
-# New parameters for the Hackathon in Chile service
-210073;1;PM2P5-KGM3;KGM3;Particulate matter d<2.5um;;;;;
+# New parameters for the Chile Hackathon smartmet service (fmiId: gribId+1400)
+# CAMS:
+211472;1;PM1-KGM3;kg m-3;Particulate matter d < 1 um;;;;;
+211473;1;PM2P5-KGM3;kg m-3;Particulate matter d < 2.5 um;;;;;
+211474;1;PM10-KGM3;kg m-3;Particulate matter d < 10 um;;;;;
+211525;1;TCNO2-KGM2;kg m-2;Total column Nitrogen dioxide;;;;;
+211526;1;TCSO2-KGM2;kg m-2;Total column Sulphur dioxide;;;;;
+211527;1;TCCO-KGM2;kg m-2;Total column Carbon monoxide;;;;;
+211528;1;TCHCHO-KGM2;kg m-2;Total column Formaldehyde;;;;;
+211606;1;GTCO3-KGM2;kg m-2;GEMS Total column ozone;;;;;
+211607;1;AOD550;;Total Aerosol Optical Depth at 550 nm;;;;;
+211608;1;SSAOD550;;Sea Salt Aerosol Optical Depth at 550 nm;;;;;
+211609;1;DUAOD550;;Dust Aerosol Optical Depth at 550 nm;;;;;
+211610;1;OMAOD550;;Organic Matter Aerosol Optical Depth at 550 nm;;;;;
+211611;1;BCAOD550;;Black Carbon Aerosol Optical Depth at 550 nm;;;;;
+211612;1;SUAOD550;;Sulphate Aerosol Optical Depth at 550 nm;;;;;
+211613;1;AOD469;;Total Aerosol Optical Depth at 469 nm;;;;;
+211614;1;AOD670;;Total Aerosol Optical Depth at 670 nm;;;;;
+211615;1;AOD865;;Total Aerosol Optical Depth at 865 nm;;;;;
+211616;1;AOD1240;;Total Aerosol Optical Depth at 1240 nm;;;;;
+215402;1;UVBED;;UV biologically effective dose;;;;;
+215403;1;UVBEDCS;;UV biologically effective dose clear-sky;;;;;
+219403;1;TCH2O2-KGM2;kg m-2;Total column hydrogen peroxide;;;;;
+219404;1;TCCH4-KGM2;kg m-2;Total column methane;;;;;
+219406;1;TCHNO3-KGM2;kg m-2;Total column nitric acid;;;;;
+219413;1;TCPAN-KGM2;kg m-2;Total column peroxyacetyl nitrate;;;;;
+219416;1;TCC5H8-KGM2;kg m-2;Total column isoprene;;;;;
+219427;1;TCNO-KGM2;kg m-2;Total column nitrogen monoxide;;;;;
+219430;1;TCOH-KGM2;kg m-2;Total column hydroxyl radical;;;;;
+219445;1;TCC2H6-KGM2;kg m-2;Total column ethane;;;;;
+219447;1;TCC3H8-KGM2;kg m-2;Total column propane;;;;;
+
+

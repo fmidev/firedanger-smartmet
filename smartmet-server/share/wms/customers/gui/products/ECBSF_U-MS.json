@@ -1,0 +1,23 @@
+{
+    "title": "ECBSF U wind in m/s",
+    "abstract": "U wind",
+    "projection": {},
+    "producer": "ECBSF",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/wind_new.json",
+	    "css": "isobands/wind_new.css",
+	    "parameter": "U-MS:ECBSF::1:0:1:0",
+	    "sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}
+
