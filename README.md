@@ -24,13 +24,23 @@ For more information and examples of the usage of the TimeSeries plugin, see Sma
 
 # Using the WMS/Dali plugin for images
 
-Dali is the engine to make images from smartmet-server internal data. It can be used directly or with appropriate layer definitions can provide an OGC compliant WebMapService interface. Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. An example Dali reguest to the server (ECBSF ground temperature in Kelvins): 
+Dali is the engine to make images from smartmet-server internal data. It can be used directly or with appropriate layer definitions can provide an OGC compliant WebMapService interface. Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. 
 
-`https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000`
+An example WMS request to the server (ECBSF temperature in Kelvins):
+
+`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:isobands:ECBSF_T-K&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=800&WIDTH=400&20210902T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50`
+
+An example response for this query is shown below: 
+
+![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:isobands:ECBSF_T-K&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=800&WIDTH=400&20210902T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50)
 
 Available WMS 'LAYERS' can be checked with the GetCapabilities request as follows: 
 
 `https://smart.nsdc.fmi.fi/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+
+An example Dali request to the server (ECBSF ground temperature in Kelvins): 
+
+`https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000`
 
 A response for the previous example query is shown below. The dali product urls can be copied from the grid-gui page by changing a parameters Presentation menu to Dali and copying the image urls. The time setting can be used to make an animation that loads consequitive time steps.
 
