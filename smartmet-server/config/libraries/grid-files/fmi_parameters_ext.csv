@@ -9,7 +9,7 @@
 # 6) TimeInterpolationMethod
 # 7) LevelInterpolationMethod
 # 8) DefaultPrecision
-#
+# 
 10000;1;VIRT-T-F;F;Temperature in Fahrenheits;1;;
 10100;1;VIRT-WIND-DIR;degrees;Wind direction;1;;
 10101;1;VIRT-WIND-SPEED;m s-1;Wind speed;1;24;

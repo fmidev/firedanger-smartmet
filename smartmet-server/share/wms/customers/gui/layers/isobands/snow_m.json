@@ -1,0 +1,194 @@
+[
+    {
+        "attributes": {
+            "class": "Snowthickness_30"
+        },
+        "lolimit": 30.0,
+        "qid": "Snowthickness_30"
+    },
+     {
+        "attributes": {
+            "class": "Snowthickness_25_30"
+        },
+	"hilimit": 30.0,
+        "lolimit": 25.0,
+        "qid": "Snowthickness_25_30"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_20_25"
+        },
+	"hilimit": 25.0,
+        "lolimit": 20.0,
+        "qid": "Snowthickness_20_25"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_15_20"
+        },
+	"hilimit": 20.0,
+        "lolimit": 15.0,
+        "qid": "Snowthickness_15_20"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_14_15"
+        },
+        "hilimit": 15.0,
+        "lolimit": 14.0,
+        "qid": "Snowthickness_14_15"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_13_14"
+        },
+        "hilimit": 14.0,
+        "lolimit": 13.0,
+        "qid": "Snowthickness_13_14"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_12_13"
+        },
+        "hilimit": 13.0,
+        "lolimit": 12.0,
+        "qid": "Snowthickness_12_13"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_11_12"
+        },
+        "hilimit": 12.0,
+        "lolimit": 11.0,
+        "qid": "Snowthickness_11_12"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_10_11"
+        },
+        "hilimit": 11.0,
+        "lolimit": 10.0,
+        "qid": "Snowthickness_10_11"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_9_10"
+        },
+        "hilimit": 10.0,
+        "lolimit": 9.0,
+        "qid": "Snowthickness_9_10"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_8_9"
+        },
+        "hilimit": 9.0,
+        "lolimit": 8.0,
+        "qid": "Snowthickness_8_9"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_7_8"
+        },
+        "hilimit": 8.0,
+        "lolimit": 7.0,
+        "qid": "Snowthickness_7_8"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_6_7"
+        },
+        "hilimit": 7.0,
+        "lolimit": 6.0,
+        "qid": "Snowthickness_6_7"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_5_6"
+        },
+        "hilimit": 6.0,
+        "lolimit": 5.0,
+        "qid": "Snowthickness_5_6"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_4_5"
+        },
+        "hilimit": 5.0,
+        "lolimit": 4.0,
+        "qid": "Snowthickness_4_5"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_3_4"
+        },
+        "hilimit": 4.0,
+        "lolimit": 3.0,
+        "qid": "Snowthickness_3_4"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_2_3"
+        },
+        "hilimit": 3.0,
+        "lolimit": 2.0,
+        "qid": "Snowthickness_2_3"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_1_2"
+        },
+        "hilimit": 2.0,
+        "lolimit": 1.0,
+        "qid": "Snowthickness_1_2"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_08_1"
+        },
+        "hilimit": 1.0,
+        "lolimit": 0.8,
+        "qid": "Snowthickness_08_1"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_06_08"
+        },
+        "hilimit": 0.8,
+        "lolimit": 0.6,
+        "qid": "Snowthickness_06_08"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_04_06"
+        },
+        "hilimit": 0.6,
+        "lolimit": 0.4,
+        "qid": "Snowthickness_04_06"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_02_04"
+        },
+        "hilimit": 0.4,
+        "lolimit": 0.2,
+        "qid": "Snowthickness_02_04"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_01_02"
+        },
+        "hilimit": 0.2,
+        "lolimit": 0.1,
+        "qid": "Snowthickness_01_02"
+    },
+    {
+        "attributes": {
+            "class": "Snowthickness_0_01"
+        },
+        "hilimit": 0.1,
+        "lolimit": 0,
+        "qid": "Snowthickness_0_01"
+    }
+]
+

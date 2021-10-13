@@ -1,6 +1,6 @@
 {
-    "title": "ECBSF Temperature in Kelvins",
-    "abstract": "Temperature isobands every two degrees",
+    "title": "ECBSF V wind in m/s",
+    "abstract": "V wind",
     "projection": {},
     "producer": "ECBSF",
     "source": "grid",
@@ -8,9 +8,9 @@
 	"layers": [{
 	    "qid": "l", 
 	    "layer_type": "isoband",
-	    "isobands": "json:isobands/T-K.json",
-	    "css": "isobands/temperature.css",
-	    "parameter": "T-K:ECBSF::1:0:1:0",
+	    "isobands": "json:isobands/uv_wind.json",
+	    "css": "isobands/uv_wind.css",
+	    "parameter": "V-MS:ECBSF::1:0:1:0",
 	    "sampling":{
 		"relativeresolution": 4
 	    },
@@ -20,3 +20,4 @@
 	}]
     }]
 }
+

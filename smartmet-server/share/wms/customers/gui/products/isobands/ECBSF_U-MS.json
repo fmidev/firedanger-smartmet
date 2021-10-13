@@ -1,16 +1,16 @@
 {
-    "title": "ECB2SF V wind in m/s",
-    "abstract": "V wind",
+    "title": "ECBSF U wind in m/s",
+    "abstract": "U wind",
     "projection": {},
-    "producer": "ECB2SF",
+    "producer": "ECBSF",
     "source": "grid",
     "views":[{
 	"layers": [{
 	    "qid": "l", 
 	    "layer_type": "isoband",
-	    "isobands": "json:isobands/wind_new.json",
-	    "css": "isobands/wind_new.css",
-	    "parameter": "V-MS:ECB2SF::1:0:1:0",
+	    "isobands": "json:isobands/uv_wind.json",
+	    "css": "isobands/uv_wind_new.css",
+	    "parameter": "U-MS:ECBSF::1:0:1:0",
 	    "sampling":{
 		"relativeresolution": 4
 	    },

@@ -8,8 +8,8 @@
 	"layers": [{
 	    "qid": "l", 
 	    "layer_type": "isoband",
-	    "isobands": "json:isobands/wind_new.json",
-	    "css": "isobands/wind_new.css",
+	    "isobands": "json:isobands/uv_wind.json",
+	    "css": "isobands/uv_wind.css",
 	    "parameter": "U-MS:ECB2SF::1:0:1:0",
 	    "sampling":{
 		"relativeresolution": 4

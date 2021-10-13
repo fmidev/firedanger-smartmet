@@ -1,0 +1,23 @@
+{
+    "title": "ECSF Evaporation in mm",
+    "abstract": "C3S seasonal forecast data from ECMWF",
+    "projection": {},
+    "producer": "ECSF",
+    "source": "grid",
+    "views":[{
+        "layers": [{
+            "qid": "l", 
+            "layer_type": "isoband",
+            "isobands": "json:isobands/evaporation.json",
+            "css": "isobands/evaporation.css",
+            "parameter": "EVAP-KGM2:ECSF::1:0:1",
+            "sampling":{
+                "relativeresolution": 4
+            },
+            "attributes": {
+                "shape-rendering": "crispEdges"
+            }
+        }]
+    }]
+}
+
