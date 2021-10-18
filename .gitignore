@@ -5,4 +5,5 @@ dev/
 __pycache__
 *.egg-info
 *~
-smartmet-server/config/engine/grid-engine/*_auto.csv
+*_auto.csv
+*.swp
