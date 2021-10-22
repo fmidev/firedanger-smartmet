@@ -32,8 +32,10 @@ TPE-K;4;;;
 # 7:Soil clay fraction ((0 - 1))
 
 # 8:Surface runoff (m)
+SRO-M;8;;;
 
 # 9:Sub-surface runoff (m)
+SSRO-M;9;;;
 
 # 10:Wind speed (m s-1)
 FF-MS;10;;;
@@ -77,8 +79,10 @@ CVL-N;27;;;
 CVH-N;28;;;
 
 # 29:Type of low vegetation (~)
+TVL-N;29;;;
 
 # 30:Type of high vegetation (~)
+TVH-N;30;;;
 
 # 31:Sea ice area fraction ((0 - 1))
 IC-0TO1;31;;;
@@ -100,13 +104,16 @@ TSEA-K;34;;;
 # 38:Ice temperature layer 4 (K)
 
 # 39:Volumetric soil water layer 1 (m3 m-3)
-SOILWET-M3M3;39;;;
+SWVL1-M3M3;39;;;
 
 # 40:Volumetric soil water layer 2 (m3 m-3)
+SWVL2-M3M3;40;;;
 
 # 41:Volumetric soil water layer 3 (m3 m-3)
+SWVL3-M3M3;41;;;
 
 # 42:Volumetric soil water layer 4 (m3 m-3)
+SWVL4-M3M3;42;;;
 
 # 43:Soil type (~)
 SOILTY-N;43;;;
@@ -320,11 +327,12 @@ TOTCWV-KGM2;137;;;
 # 138:Vorticity (relative) (s-1)
 
 # 139:Soil temperature level 1 (K)
+STL1-K;139;;;
 
 # 140:Soil wetness level 1 (m of water equivalent)
 
 # 141:Snow depth (m of water equivalent)
-# SD-KGM2;141;;;
+WESD-M;141;;;
 
 # 142:Large-scale precipitation (m)
 RRL-KGM2;142;;;
@@ -385,13 +393,13 @@ MIXHGT-M;159;;;
 N-0TO1;164;;;
 
 # 165:10 metre U wind component (m s-1)
-U-MS;165;;;
+U10-MS;165;;;
 
 # 166:10 metre V wind component (m s-1)
-V-MS;166;;;
+V10-MS;166;;;
 
 # 167:2 metre temperature (K)
-T-K;167;;;
+TAS-K;167;;;
 
 # 168:2 metre dewpoint temperature (K)
 TD-K;168;;;
@@ -400,7 +408,7 @@ TD-K;168;;;
 RADGLOA-JM2;169;;;
 
 # 170:Soil temperature level 2 (K)
-TSOIL-K;170;;;
+STL2-K;170;;;
 
 # 171:Soil wetness level 2 (m of water equivalent)
 
@@ -423,6 +431,7 @@ RNETSWA-JM2;176;;;
 RNETLWA-JM2;177;;;
 
 # 178:Top net solar radiation (J m-2)
+TSR-J;178;;;
 
 # 179:Top net thermal radiation (J m-2)
 RTOPLWA-JM2;179;;;
@@ -434,8 +443,10 @@ EWSS-NM2S;180;;;
 NSSS-NM2S;181;;;
 
 # 182:Evaporation (m of water equivalent)
+EVAP-M;182;;;
 
 # 183:Soil temperature level 3 (K)
+STL3-K;183;;;
 
 # 184:Soil wetness level 3 (m of water equivalent)
 
@@ -485,6 +496,7 @@ TMIN-K;202;;;
 # 204:Precipitation analysis weights (~)
 
 # 205:Runoff (m)
+RO-M;205;;;
 
 # 206:Total column ozone (kg m-2)
 TOZONE-KGM2;206;;;
@@ -533,6 +545,7 @@ FF-MS;207;;;
 # 227:Tendency due to removal of negative humidity (kg kg-1)
 
 # 228:Total precipitation (m)
+RR-M;228;;;
 
 # 229:Instantaneous eastward turbulent surface stress (N m-2)
 
@@ -550,6 +563,7 @@ FF-MS;207;;;
 SKT-K;235;;;
 
 # 236:Soil temperature level 4 (K)
+STL4-K;236;;;
 
 # 237:Soil wetness level 4 (m)
 
@@ -2958,6 +2972,7 @@ RADGLO-WM2;3116;;;
 # 172212:Solar insolation rate of accumulation (W m-2)
 
 # 172228:Mean total precipitation rate (m s-1)
+RRR-MEAN-MS;172228;;;
 
 # 172239:Convective snowfall (m of water equivalent s-1)
 
@@ -4003,10 +4018,13 @@ RADGLO-WM2;3116;;;
 # 210071:Methane loss rate due to radical hydroxyl (OH) (s-1)
 
 # 210072:Particulate matter d < 1 um (kg m-3)
+PM1-KGM3;210072;;;
 
 # 210073:Particulate matter d < 2.5 um (kg m-3)
+PM2_5-KGM3;210073;;;
 
 # 210074:Particulate matter d < 10 um (kg m-3)
+PM10-KGM3;210074;;;
 
 # 210079:Wildfire viewing angle of observation (deg)
 
@@ -4101,12 +4119,16 @@ RADGLO-WM2;3116;;;
 # 210124:Formaldehyde (kg kg-1)
 
 # 210125:Total column Nitrogen dioxide (kg m-2)
+TCNO2-KGM2;210125;;;
 
 # 210126:Total column Sulphur dioxide (kg m-2)
+TCSO2-KGM2;210126;;;
 
 # 210127:Total column Carbon monoxide (kg m-2)
+TCCO-KGM2;210127;;;
 
 # 210128:Total column Formaldehyde (kg m-2)
+TCHCHO-KGM2;210128;;;
 
 # 210129:Nitrogen Oxides (kg kg-1)
 
@@ -4231,26 +4253,37 @@ RADGLO-WM2;3116;;;
 # 210203:Ozone mass mixing ratio (full chemistry scheme) (kg kg-1)
 
 # 210206:GEMS Total column ozone (kg m-2)
+GTCO3-KGM2;210206;;;
 
 # 210207:Total Aerosol Optical Depth at 550nm (~)
+AOD550;210207;;;
 
 # 210208:Sea Salt Aerosol Optical Depth at 550nm (~)
+SSAOD550;210208;;;
 
 # 210209:Dust Aerosol Optical Depth at 550nm (~)
+DUAOD550;210209;;;
 
 # 210210:Organic Matter Aerosol Optical Depth at 550nm (~)
+OMAOD550;210210;;;
 
 # 210211:Black Carbon Aerosol Optical Depth at 550nm (~)
+BCAOD550;210211;;;
 
 # 210212:Sulphate Aerosol Optical Depth at 550nm (~)
+SUAOD550;210212;;;
 
 # 210213:Total Aerosol Optical Depth at 469nm (~)
+AOD469;210123;;;
 
 # 210214:Total Aerosol Optical Depth at 670nm (~)
+AOD670;210214;;;
 
 # 210215:Total Aerosol Optical Depth at 865nm (~)
+AOD865;210214;;;
 
 # 210216:Total Aerosol Optical Depth at 1240nm (~)
+AOD1240;210216;;;
 
 # 210217:Total aerosol optical depth at 340 nm (~)
 
@@ -4319,8 +4352,10 @@ RADGLO-WM2;3116;;;
 # 210249:Ammonium aerosol mass mixing ratio (kg kg-1)
 
 # 210250:Nitrate aerosol optical depth at 550 nm (dimensionless)
+NIAOD550;210250;;;
 
 # 210251:Ammonium aerosol optical depth at 550 nm (dimensionless)
+AMAOD550;210251;;;
 
 # 210252:Biogenic secondary organic aerosol mass mixing ratio (kg kg-1)
 
@@ -5303,8 +5338,10 @@ RADGLO-WM2;3116;;;
 # 214001:Cosine of solar zenith angle (~)
 
 # 214002:UV biologically effective dose (~)
+UVBED;214002;;;
 
 # 214003:UV biologically effective dose clear-sky (~)
+UVBEDCS;214003;;;
 
 # 214004:Total surface UV spectral flux (280-285 nm) (W m-2)
 
@@ -6787,10 +6824,13 @@ RADGLO-WM2;3116;;;
 # 217232:Biomass burning volatile organic compounds mass mixing ratio (kg kg-1)
 
 # 218003:Total column hydrogen peroxide (kg m-2)
+TCH2O2-KGM2;218003;;;
 
 # 218004:Total column methane (kg m-2)
+TCCH4-KGM2;218004;;;
 
 # 218006:Total column nitric acid (kg m-2)
+TCHNO3-KGM2;218006;;;
 
 # 218007:Total column methyl peroxide (kg m-2)
 
@@ -6803,12 +6843,14 @@ RADGLO-WM2;3116;;;
 # 218012:Total column aldehydes (kg m-2)
 
 # 218013:Total column peroxyacetyl nitrate (kg m-2)
+TCPAN-KGM2;218013;;;
 
 # 218014:Total column peroxides (kg m-2)
 
 # 218015:Total column organic nitrates (kg m-2)
 
 # 218016:Total column isoprene (kg m-2)
+TCC5H8-KGM2;218016;;;
 
 # 218018:Total column dimethyl sulfide (kg m-2)
 
@@ -6827,12 +6869,14 @@ RADGLO-WM2;3116;;;
 # 218026:Total column lead (kg m-2)
 
 # 218027:Total column nitrogen monoxide (kg m-2)
+TCNO-KGM2;218027;;;
 
 # 218028:Total column hydroperoxy radical (kg m-2)
 
 # 218029:Total column methylperoxy radical (kg m-2)
 
 # 218030:Total column hydroxyl radical (kg m-2)
+TCOH-KGM2;218030;;;
 
 # 218032:Total column nitrate radical (kg m-2)
 
@@ -6861,10 +6905,12 @@ RADGLO-WM2;3116;;;
 # 218044:Total column methacrylic acid (kg m-2)
 
 # 218045:Total column ethane (kg m-2)
+TCC2H6-KGM2;218045;;;
 
 # 218046:Total column ethanol (kg m-2)
 
 # 218047:Total column propane (kg m-2)
+TCC3H8-KGM2;219047;;;
 
 # 218048:Total column propene (kg m-2)
 
@@ -8263,6 +8309,7 @@ RADGLO-WM2;3116;;;
 # 228089:Total column rain water (kg m-2)
 
 # 228090:Total column snow water (kg m-2)
+TCSW-KGM2;228090;;;
 
 # 228091:Canopy cover fraction ((0 - 1))
 
@@ -8393,6 +8440,7 @@ N-PRCNT;228164;;;
 # 228250:Irrigation fraction (Proportion)
 
 # 228251:Potential evaporation (m)
+EVAPP-M;228251;;;
 
 # 228252:Irrigation (m)
 
@@ -8805,8 +8853,10 @@ SN-3-MM;260042;;;;
 # 260044:Convective water precipitation (kg m-2)
 
 # 260045:Total water precipitation (kg m-2)
+TWATERP-KGM2;260045;;;
 
 # 260046:Total snow precipitation (kg m-2)
+TSNOWP-KGM2;260046;;;
 
 # 260047:Total column water (Vertically integrated total water (vapour + cloud water/ice)) (kg m-2)
 
@@ -8829,6 +8879,7 @@ SNRI-KGM2;260049;;;
 # 260055:Large scale snowfall rate (m s-1)
 
 # 260056:Water equivalent of accumulated snow depth (deprecated) (kg m-2)
+WESD-KGM2;260056;;;
 
 # 260057:Total column integrated water vapour (kg m-2)
 

@@ -75,34 +75,13 @@
 # 15) Reverse mapping function
 # 16) Default precision
 # 
-ERA5;air_temperature;3;130;0;;1;00000;1;1;1;0;D;;;;
-ERA5;air_temperature;3;130;6001;;1;00000;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;0;;0;00000;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;0;;0;00007;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;0;;0;00028;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;0;;0;00100;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;6001;;0;00000;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;6001;;0;00007;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;6001;;0;00028;1;1;1;0;D;;;;
-ERA5;mole_concentration_of_carbon_dioxide_in_air;3;248;6001;;0;00100;1;1;1;0;D;;;;
 ERA5;surface_snow_density;3;33;0;;1;00000;1;1;1;0;D;;;;
 ERA5;surface_snow_density;3;33;6001;;1;00000;1;1;1;0;D;;;;
-ERA5;x_wind;3;131;0;;1;00000;1;1;1;0;D;;;;
-ERA5;x_wind;3;131;6001;;1;00000;1;1;1;0;D;;;;
-ERA5;y_wind;3;132;0;;1;00000;1;1;1;0;D;;;;
-ERA5;y_wind;3;132;6001;;1;00000;1;1;1;0;D;;;;
 CAMS;mole_concentration_of_carbon_dioxide_in_air;3;248;6002;;0;00000;1;1;1;0;D;;;;
-ECSF;air_temperature;3;130;6004;;1;00000;1;1;1;0;D;;;;
-ECSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6004;;0;00000;1;1;1;0;D;;;;
-ECSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6004;;0;00007;1;1;1;0;D;;;;
-ECSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6004;;0;00028;1;1;1;0;D;;;;
-ECSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6004;;0;00100;1;1;1;0;D;;;;
 ECSF;sea_ice_area_fraction;3;31;6004;;1;00000;1;1;1;0;D;;;;
 ECSF;sea_water_temperature;3;34;6004;;1;00000;1;1;1;0;D;;;;
 ECSF;surface_snow_density;3;33;6004;;1;00000;1;1;1;0;D;;;;
 ECSF;wind_speed_of_gust;3;49;6004;;1;00000;1;1;1;0;D;;;;
-ECSF;x_wind;3;131;6004;;1;00000;1;1;1;0;D;;;;
-ECSF;y_wind;3;132;6004;;1;00000;1;1;1;0;D;;;;
 ECBSF;air_temperature;3;130;6003;;1;00000;1;1;1;0;D;;;;
 ECBSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6003;;0;00000;1;1;1;0;D;;;;
 ECBSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6003;;0;00007;1;1;1;0;D;;;;

@@ -557,7 +557,9 @@
 595;WGU-MS;m;U-component of wind gust;1;1;1;;
 596;WGV-MS;m;V-component of wind gust;1;1;1;;
 597;PARS-WM2;W m-2;Photosyntetically active radiation at the surface;1;1;1;;
-598;SOILWET-M3M3;m;Surface soil wetness;1;1;1;;
+# SOILWET-M3M3 -> SWVL1-M3M3 (more logical naming)
+#598;SOILWET-M3M3;m;Surface soil wetness;1;1;1;;
+598;SWVL1-M3M3;m;Volumetric soil water layer 1;1;1;1;;
 599;PSTL-HPA;hPa;Pressure on station level;1;1;1;;
 600;RMM-N;min;Rain minutes of hour;1;1;1;;
 601;UVMAXT-H;h;Hour of UV maximum;1;1;1;;
@@ -693,7 +695,9 @@
 767;SNOWMR-KGKG;kg kg-1;Snow mixing ratio;1;1;1;;
 768;CL-2-FT;ft;Height of cloud layer in feet, second parameter;1;1;1;;
 769;RH-0TO1;0to1;Relative humidity, 0 to 1;1;1;1;;
-771;TSOIL-K;K;Soil temperature in Kelvins;1;1;1;;
+# TSOIL-K -> STL2-K (more logical naming)
+#771;TSOIL-K;K;Soil temperature in Kelvins;1;1;1;;
+771;STL2-K;K;Soil temperature level 2 in Kelvins;1;1;1;;
 772;FRSB-CM;cm;Frost soil bottom in centimeters;1;1;1;;
 773;FRST-CM;cm;Frost soil top in centimeters;1;1;1;;
 774;VV2-M;m;Visibility in meters, himan version;1;1;1;;
@@ -1313,3 +1317,62 @@
 1431;RAIL-N;No Unit;Rail traffic condition;2;2;2;;
 1432;RADLWCA-JM2;J m-2;Surface thermal radiation downward clear-sky;1;1;1;;
 1433;RADLWC-WM2;J m-2;Surface thermal radiation downward clear-sky;1;1;1;;
+# some new mappings (10000000 + grib-id)
+10000167;TAS-K;K;2 metre temperature in Kelvins;
+10000165;U10-MS;m s-1;10 metre U wind component;
+10000166;V10-MS;m s-1;10 metre V wind component;
+10000008;SRO-M;m;Surface runoff (metres);
+10000009;SSRO-M;m;Subsurface runoff (metres);
+10000029;TVL-N;;Type of low vegetation; 
+10000030;TVH-N;;Type of high vegetation;
+10000040;SWVL2-M3M3;M3M3;Volumetric soil water layer 2;1;1;1;5;
+10000041;SWVL3-M3M3;M3M3;Volumetric soil water layer 3;1;1;1;5;
+10000042;SWVL4-M3M3;M3M3;Volumetric soil water layer 4;1;1;1;5;
+10000139;STL1-K;K;Soil temperature level 1 in Kelvins;1;1;1;1;
+10000141;WESD-M;m;Snow depth (m of water equivalent);1;1;1;2;
+10000178;TSR-J;J;Top Net Solar Radation;1;1;1;2;
+10000182;EVAP-M;m;Evaporation (m of water equivalent);1;1;1;1;
+10000183;STL3-K;K;Soil temperature level 3 in Kelvins;1;1;1;1;
+10000205;RO-M;M;Runoff in depth of water in metres;1;1;1;5;
+10000228;RR-M;m;Total precipitation in meters;1;1;1;1;
+10000236;STL4-K;K;Soil temperature level 4 in Kelvins;1;1;1;1;
+10260045;TWATERP-KGM2;kg m-2;Total Water Precipitation;1;1;1;2;
+10260046;TSNOWP-KGM2;kg m-2;Total snow precipitation;1;1;1;2;
+10260056;WESD-KGM2;kg m-2;Water equivalent of accumulated snow depth (deprecated);1;1;1;2;
+10172228;RRR-MEAN-MS;m s-1;Mean total precipitation rate;1;1;1;2;
+# TCSNOWWAT-KGM1 -> TCSW-KGM2 (more logical naming)
+10228090;TCSW-KGM2;kg m2;Total column snow water (kg m-2)
+#10228090;TCSNOWWAT-KGM2;kg m2;Total column snow water (kg m-2)
+10228251;EVAPP-M;m;Potential evaporation;
+# CAMS
+10210211;BCAOD550;JustAnumber;Black carbon aerosol optical depth at 550 nm;
+10210209;DUAOD550;JustAnumber;Dust aerosol optical depth at 550 nm;
+10210250;NIAOD550;JustAnumber;Nitrate aerosol optical depth at 550 nm;
+10210210;OMAOD550;JustAnumber;Organic matter aerosol optical depth at 550 nm;
+10210074;PM10-KGM3;kg m-3;Particulate matter d < 10 um;
+10210072;PM1-KGM3;kg m-3;Particulate matter d < 1 um;
+10210073;PM2_5-KGM3;kg m-3;Particulate matter d < 2.5 um;
+10210208;SSAOD550;JustAnumber;Sea salt aerosol optical depth at 550 nm;
+10210212;SUAOD550;JustAnumber;Suplhate aerosol optical depth at 550 nm;
+10210216;AOD1240;JustAnumber;Total aerosol optical depth at 1240 nm;
+10210213;AOD469;JustAnumber;Total aerosol optical depth at 469 nm;
+10210207;AOD550;JustAnumber;Total aerosol optical depth at 550 nm;
+10210214;AOS670;JustAnumber;Total aerosol optical depth at 670 nm;
+10210215;AOD865;JustAnumber;Total aerosol optical depth at 865 nm;
+10210127;TCCO-KGM2;kg m-2;Total column Carbon monoxide;
+10218045;TCC2H6-KGM2;kg m-2;Total column ethane;
+10210128;TCHCHO-KGM2;kg m-2;Total column Formaldehyde;
+10218003;TCH2O2-KGM2;kg m-2;Total column hydrogen peroxide;
+10218030;TCOH-KGM2;kg m-2;Total column hyroxyl radical;
+10218016;TCC5H8-KGM2;kg m-2;Total column isoprene;
+10218004;TCCH4-KGM2;kg m-2;Total column methane;
+10218006;TCHNO3-KGM2;kg m-2;Total column nitric acid;
+10210125;TCNO2-KGM2;kg m-2;Total column Nitrogen dioxide;
+10218027;TCNO-KGM2;kg m-2;Total column nitrogen monoxide;
+10210206;GTCO3-KGM2;kg m-2;GEMS Total column ozone;
+10218013;TCPAN-KGM2;kg m-2;Total column peroxyacetyl nitrate;
+10218047;TCC3H8-KGM2;kg m-2;Total column propane;
+10210126;TCSO2-KGM2;kg m-2;Total column Sulphur dioxide;
+10214002;UVBED;JustAnumber;UV biologically effective dose;
+10214003;UVBEDCS;JustAnumber;UV biologically effective dose clear-sky;
+10210251;AMAOD550;JustAnumber;Ammonium aerosol optical depth at 550 nm;

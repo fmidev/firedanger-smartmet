@@ -8,8 +8,8 @@
         "layers": [{
             "qid": "l", 
             "layer_type": "isoband",
-            "isobands": "json:isobands/radiation_jm2_test.json",
-            "css": "isobands/radiation_test.css",
+            "isobands": "json:isobands/radiation_jm2.json",
+            "css": "isobands/radiation.css",
             "parameter": "RTOPLWA-JM2:ECSF::1:0:1",
             "sampling":{
                 "relativeresolution": 4
