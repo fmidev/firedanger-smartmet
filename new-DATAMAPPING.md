@@ -18,7 +18,7 @@ Next, you might need to run the following:
 
 Since mapping should be automatic, new mappings should pop up in config/engines/grid-engine/**mapping_fmi_auto.csv**. If not, the mapping can be forced in config/engines/grid-engine/**mapping_fmi.csv**, which contains default mappings. 
 
-In the end it should be possible to query daya in timeseries requests or WMS layer definitions with newbase names or strings with FMI-ID:::: names. Those names are in the fmi_parameters.csv
+In the end it should be possible to query data in timeseries requests or WMS layer definitions with newbase names or strings with FMI-ID:::: names. Those names are in the fmi_parameters.csv
 
 
 ![](https://github.com/fmidev/chile-smartmet/blob/master/valmis-flow.png)
