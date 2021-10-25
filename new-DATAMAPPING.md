@@ -12,9 +12,11 @@ GRIB parameter and level identifiers need to be mapped into FMI parameter and le
 
 Many of the csv files can be automatically updated from a FMI database. The ext/ versions are used to bypass this database update, so it will not overwrite local configurations. It is therefore recommended to add your own settings mainly into files in the ext/ directory. If you created your own mapping files (in ext/ or other), remember to add their name (and path, if defined in ext/ or other) to the main configuration file config/libraries/grid-files/**grid-files.conf**. 
 
-Next, you might need to run the following:
+Next, you might need to fun the following filesys2smartmet command:
 
 `sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0` 
+
+(The above should work if adding and mapping new GRIB files to the system. In case you are changing the mappings for GRIB files that already had been mapped before or creating new mappings for GRIB files added earlier to the system, you need to first temporarily move all the GRIB files in question to some other location, run the filesys2smartmet command, move GRIB files back to the original location, and run filesys2smartmet again.)   
 
 Since mapping should be automatic, new mappings should pop up in config/engines/grid-engine/**mapping_fmi_auto.csv**. If not, the mapping can be forced in config/engines/grid-engine/**mapping_fmi.csv**, which contains default mappings. 
 
