@@ -19,11 +19,4 @@
 
 # Adding identification fields for some "standard" grib identifiers
 
-#228090;table2Version=228,indicatorOfParameter=90;
-#228100;table2Version=228,indicatorOfParameter=100;
-#228101;table2Version=228,indicatorOfParameter=101;
-#228102;table2Version=228,indicatorOfParameter=102;
-#228139;table2Version=128,indicatorOfParameter=170,indicatorOfTypeOfLevel=111;
-#228139;table2Version=128,indicatorOfParameter=170,indicatorOfTypeOfLevel=112;
-#228251;table2Version=228,indicatorOfParameter=251;
 

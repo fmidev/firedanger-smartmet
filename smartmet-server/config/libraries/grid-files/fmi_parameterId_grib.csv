@@ -4274,13 +4274,13 @@ BCAOD550;210211;;;
 SUAOD550;210212;;;
 
 # 210213:Total Aerosol Optical Depth at 469nm (~)
-AOD469;210123;;;
+AOD469;210213;;;
 
 # 210214:Total Aerosol Optical Depth at 670nm (~)
 AOD670;210214;;;
 
 # 210215:Total Aerosol Optical Depth at 865nm (~)
-AOD865;210214;;;
+AOD865;210215;;;
 
 # 210216:Total Aerosol Optical Depth at 1240nm (~)
 AOD1240;210216;;;
@@ -6910,7 +6910,7 @@ TCC2H6-KGM2;218045;;;
 # 218046:Total column ethanol (kg m-2)
 
 # 218047:Total column propane (kg m-2)
-TCC3H8-KGM2;219047;;;
+TCC3H8-KGM2;218047;;;
 
 # 218048:Total column propene (kg m-2)
 
@@ -9755,18 +9755,25 @@ FL-MPLTY-N;260391;;;
 # 260539:Fire detection indicator (Code table 4.223)
 
 # 260540:Forest fire weather index (Numeric)
+FWINX;260540;;;
 
 # 260541:Fine fuel moisture code (Numeric)
+FFMCODE;260541;;;
 
 # 260542:Duff moisture code (Numeric)
+DUFMCODE;260542;;;
 
 # 260543:Drought code (Numeric)
+DRTCODE;260543;;;
 
 # 260544:Initial fire spread index (Numeric)
+INFSINX;260544;;;
 
 # 260545:Fire buildup index (Numeric)
+FBUPINX;260545;;;
 
 # 260546:Fire daily severity rating (Numeric)
+FDSRTE;260546;;;
 
 # 260550:Cloudy radiance (with respect to wave number) (W m-1 sr-1)
 
@@ -9783,12 +9790,14 @@ FL-MPLTY-N;260391;;;
 # 260556:Angstrom coefficient (dimensionless)
 
 # 260557:Keetch-Byram drought index (Numeric)
+KBDI;260557;;;
 
 # 260558:Drought factor (as defined by the Australian forest service) (Numeric)
 
 # 260559:Rate of spread (as defined by the Australian forest service) (m s-1)
 
 # 260560:Fire danger index (as defined by the Australian forest service) (Numeric)
+FDIMRK;260560;;;
 
 # 260561:Spread component (as defined by the U.S Forest Service National Fire-Danger Rating System) (Numeric)
 

@@ -1,5 +1,5 @@
 {
-    "title": "ECSF Evaporation in mm",
+    "title": "ECSF Evaporation in m",
     "abstract": "C3S seasonal forecast data from ECMWF",
     "projection": {},
     "producer": "ECSF",
@@ -10,7 +10,7 @@
             "layer_type": "isoband",
             "isobands": "json:isobands/evaporation.json",
             "css": "isobands/evaporation.css",
-            "parameter": "EVAP-KGM2:ECSF::1:0:1",
+            "parameter": "EVAP-M:ECSF::1:0:1",
             "sampling":{
                 "relativeresolution": 4
             },

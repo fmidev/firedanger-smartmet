@@ -10,3 +10,6 @@ ECB2SF;6001;27.8km x 27.8km;
 ECSF;6004;110km x 110km;
 ERA5L;6003;9.0km x 9.0km;
 ERA5;6001;27.8km x 27.8km;
+ECFWI;6001;27.8km x 27.8km;
+ECMARK5;6001:27.8km x 27.8km;
+

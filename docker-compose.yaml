@@ -35,6 +35,9 @@ services:
       - POSTGRES_PASSWORD=OmaHassuSalasana1234!
     ports:
       - "8080:8080"
+    networks:
+      customnetwork:
+        ipv4_address: 172.18.0.5
     depends_on:
       # Entrypoint has script to validate that database is ready
       - fminames-db
@@ -74,6 +77,9 @@ services:
     ports:
       # Port exposed for connecting from host (not required in production)
      - "5432:5432"
+    networks:
+      customnetwork:
+        ipv4_address: 172.18.0.2
     #volumes:
     #
     # Keep database stuff stored on local file system
@@ -86,6 +92,9 @@ services:
     # Create a container named...
     container_name: redis-content-server
     restart: always
+    networks:
+      customnetwork:
+        ipv4_address: 172.18.0.3
     ports:
       # Port exposed for connecting from host (not required in production)
       - "6379:6379"
@@ -95,8 +104,11 @@ services:
     image: danieldent/nginx-ssl-proxy
     container_name: ssl-proxy
     restart: always
+    networks:
+      customnetwork:
+        ipv4_address: 172.18.0.4
     environment:
-      UPSTREAM: 172.22.0.5:8080
+      UPSTREAM: 172.18.0.5:8080
       SERVERNAME: smart.nsdc.fmi.fi
     ports:
       - "80:80"
@@ -104,3 +116,8 @@ services:
     volumes:
       - "/etc/letsencrypt"
       - ./ssl-conf/main_location.conf:/etc/nginx/main_location.conf
+networks:
+  customnetwork:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16

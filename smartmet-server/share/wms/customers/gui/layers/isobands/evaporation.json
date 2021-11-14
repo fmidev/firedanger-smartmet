@@ -154,14 +154,14 @@
     {
 	"qid": "Evaporation_090_100",
 	"hilimit": -0.090,
-	"lolimit": -0.100,
+	"lolimit": -0.500,
 	"attributes": {
 	    "class": "Evaporation_090_100"
 	}
     },
     {
 	"qid": "Evaporation_100_inf",
-	"hilimit": -0.100,
+	"hilimit": -0.500,
 	"attributes": {
 	    "class": "Evaporation_100_inf"
 	}

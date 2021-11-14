@@ -1,0 +1,76 @@
+{
+    "title": "ECSF Evaporation in m",
+    "abstract": "EVAP-M with legend",
+    "projection": {},
+    "producer": "ECSF",
+    "source": "grid",
+    "refs": {},
+    "defs": {
+        "styles": {
+            ".Label": { "font": "Arial", "font-size": 9 },
+            ".Units": { "font": "Arial", "font-size": 11 }
+        },
+        "layers": [  {
+            "tag": "symbol",
+            "attributes": { "id": "rect" },
+            "layers": [ {
+                "tag": "rect",
+                "attributes": { "width": "14", "height": "12"}
+            } ]
+        },
+                     {
+                         "tag": "symbol",
+                         "attributes": { "id": "uptriangle" },
+                         "layers": [ {
+                             "tag": "path",
+                             "attributes": {"d": "M0 12,7 0,14 12Z"}
+                         } ]
+                     } ]
+    },
+    "views":[
+        { // *** View 1
+            "layers": [
+		{ // *** Layer 1: Evaporation
+                "qid": "l",
+                    "layer_type": "isoband",
+                    "isobands": "json:isobands/evaporation.json",
+                    "css": "isobands/evaporation.css",
+                    "parameter": "EVAP-M:ECSF::1:0:1",
+                    "sampling":{
+			"relativeresolution": 4
+                    },
+                    "attributes": {
+			"shape-rendering": "crispEdges"
+                    }
+		},
+		{ // *** Layer 2: Evaporation legend
+                    "layer_type": "legend",
+                    "x": 10, "y": 10, "dx": 0, "dy": 12,
+                    "isobands": "json:isobands/evaporation.json",
+                    "symbols": {
+			"css": "isobands/evaporation.css",
+			"symbol": "rect",
+			//   "start": "uptriangle",
+			"attributes": {"stroke": "black", "stroke-width": "0.5"}
+                    },
+                    "labels":  {
+			"type": "lolimit",
+			"dx": 18,
+			"dy": 14,
+			"conversions": {"0.0": "0.0"}
+                    },
+                    "attributes": {
+			"transform": "translate(-7 0)",
+			"id": "evaporationlegend",
+			"class": "Label"
+                    },
+                    "layers": [ {
+			"tag": "text",
+			"cdata": "m",
+			"attributes": { "x": 28, "y": 12, "class": "Units" }
+                    }]
+		}
+            ]
+	}]
+}
+

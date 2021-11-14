@@ -1,6 +1,6 @@
 {
-    "title": "ECSF Instantaneous wind speed in m/s",
-    "abstract": "C3S seasonal forecast data from ECMWF",
+    "title": "EC Instantaneous Wind Speed Isobands",
+    "abstract": "FFG-MS Instantaneous wind speed (m/s) from ECMWF forecast model.",
     "projection": {},
     "producer": "ECSF",
     "source": "grid",
@@ -9,7 +9,7 @@
             "qid": "l", 
             "layer_type": "isoband",
             "isobands": "json:isobands/windspeed_ms.json",
-            "css": "isobands/uv_wind.css",
+            "css": "isobands/windspeed_ms.css",
             "parameter": "FFG-MS:ECSF::1:0:1",
             "sampling":{
                 "relativeresolution": 4

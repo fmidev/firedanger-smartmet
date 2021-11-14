@@ -1357,7 +1357,7 @@
 10210216;AOD1240;JustAnumber;Total aerosol optical depth at 1240 nm;
 10210213;AOD469;JustAnumber;Total aerosol optical depth at 469 nm;
 10210207;AOD550;JustAnumber;Total aerosol optical depth at 550 nm;
-10210214;AOS670;JustAnumber;Total aerosol optical depth at 670 nm;
+10210214;AOD670;JustAnumber;Total aerosol optical depth at 670 nm;
 10210215;AOD865;JustAnumber;Total aerosol optical depth at 865 nm;
 10210127;TCCO-KGM2;kg m-2;Total column Carbon monoxide;
 10218045;TCC2H6-KGM2;kg m-2;Total column ethane;
@@ -1376,3 +1376,14 @@
 10214002;UVBED;JustAnumber;UV biologically effective dose;
 10214003;UVBEDCS;JustAnumber;UV biologically effective dose clear-sky;
 10210251;AMAOD550;JustAnumber;Ammonium aerosol optical depth at 550 nm;
+# ECMARK5 
+10260560;FDIMRK;JustAnumber;Fire danger index (as defined by the Australian forest service);
+10260557;KBDI;JustAnumber;Keetch-Byram drought index;
+# ECFWI
+10260545;FBUPINX;JustAnumber;Fire buildup index;
+10260543;DRTCODE;JustAnumber;Drought code;
+10260542;DUFMCODE;JustAnumber;Duff moisture code;
+10260546;FDSRTE;JustAnumber;Fire daily severity rating;
+10260541;FFMCODE;JustAnumber;Fine fuel moisture code;
+10260540;FWINX;JustAnumber;Forest fire weather index;
+10260544;INFSINX;JustAnumber;Initial fire spread index;

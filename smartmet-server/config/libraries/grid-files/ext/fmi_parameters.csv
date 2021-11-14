@@ -29,28 +29,4 @@
 
 #################################################################################
 
-#10000008;SRO-M;m;Surface runoff (metres);
-#10000009;SSRO-M;m;Subsurface Runoff (metres);
-#10000029;TVL-N;;Type of low vegetation 
-#10000030;TVH-N;;Type of high vegetation
-#10000039;SWVL1-M3M3;M3M3;Surface soil wetness;1;1;1;5;
-#10000040;SWVL2-M3M3;M3M3;Volumetric Soil Water layer 2;1;1;1;5;
-#10000041;SWVL3-M3M3;M3M3;Volumetric Soil Water layer 3;1;1;1;5;
-#10000042;SWVL4-M3M3;M3M3;Volumetric Soil Water layer 4;1;1;1;5;
-#10000139;STL1-K;K;Soil temperature level 1 in Kelvins;1;1;1;1;
-#10000141;WESD-M;m;Snow depth (m of water equivalent);1;1;1;2;
-#10000178;TSR-J;J;Top Net Solar Radation;1;1;1;2;
-#10000182;EVAP-M;m;Evaporation (m of water equivalent);1;1;1;1;
-#10000170;STL2-K;K;Soil temperature level 2 in Kelvins;1;1;1;1;
-#10000183;STL3-K;K;Soil temperature level 3 in Kelvins;1;1;1;1;
-#10000205;RO-M;M;Runoff in depth of water in metres;1;1;1;5;
-#10000228;RR-M;m;Total precipitation in meters;1;1;1;1;
-#10000236;STL4-K;K;Soil temperature level 4 in Kelvins;1;1;1;1;
-#10260045;TWATERP-KGM2;kg m-2;Total Water Precipitation;1;1;1;2;
-#10260046;TSNOWP-KGM2;kg m-2;Total snow precipitation;1;1;1;2;
-#10260056;WESD-KGM2;kg m-2;Water equivalent of accumulated snow depth (deprecated);1;1;1;2;
-#10172228;RRR-MEAN-MS;m s-1;Mean total precipitation rate;1;1;1;2;
-#10228090;TCSNOWWAT-KGM2;kg m2;Total column snow water (kg m-2)
-#10228251;EVAPP-M;m;Potential evaporation
-# CAMS
-#10210072;PM1-KGM3;kg m-3;Particulate matter d < 1 um;
+

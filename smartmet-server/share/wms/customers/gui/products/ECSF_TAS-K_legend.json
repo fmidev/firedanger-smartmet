@@ -1,6 +1,6 @@
 {
-    "title": "ECSF Temperature in Kelvins",
-    "abstract": "T-K with legend",
+    "title": "EC 2 Metre Temperature Isobands",
+    "abstract": "TAS-K 2 metre temperature (K) from ECMWF forecast model.",
     "projection": {},
     "producer": "ECSF",
     "source": "grid",
@@ -27,28 +27,27 @@
                          } ]
                      } ]
     },
-    "views":[{
+    "views":[
+	{ // *** View 1
         "layers": [
-            {
-                // Draw temperature isobands
+            { // *** Layer 1: Isoband layer 
                 "qid": "l",
                 "layer_type": "isoband",
                 "isobands": "json:isobands/temperature_K.json",
                 "css": "isobands/temperature.css",
-                "parameter": "T-K:ECSF::1:0:1",
-                "sampling":{
+                "parameter": "TAS-K:ECSF::1:0:1",
+		"sampling":{
                     "relativeresolution": 4
                 },
                 "attributes": {
                     "shape-rendering": "crispEdges"
 		}
             },
-            {
-                // Draw wind legend
+            { // *** Layer 2: Legend layer
                 "layer_type": "legend",
                 "x": 10, "y": 10, "dx": 0, "dy": 12,
                 "isobands": "json:isobands/temperature_K.json",
-                "symbols": {
+		"symbols": {
                     "css": "isobands/temperature.css",
                     "symbol": "rect",
                 //   "start": "uptriangle",
@@ -62,7 +61,7 @@
                 },
                 "attributes": {
                     "transform": "translate(-7 0)",
-                    "id": "windlegend",
+                    "id": "temperaturelegend",
                     "class": "Label"
                 },
                 "layers": [ {

@@ -75,28 +75,3 @@
 # 15) Reverse mapping function
 # 16) Default precision
 # 
-ERA5;surface_snow_density;3;33;0;;1;00000;1;1;1;0;D;;;;
-ERA5;surface_snow_density;3;33;6001;;1;00000;1;1;1;0;D;;;;
-CAMS;mole_concentration_of_carbon_dioxide_in_air;3;248;6002;;0;00000;1;1;1;0;D;;;;
-ECSF;sea_ice_area_fraction;3;31;6004;;1;00000;1;1;1;0;D;;;;
-ECSF;sea_water_temperature;3;34;6004;;1;00000;1;1;1;0;D;;;;
-ECSF;surface_snow_density;3;33;6004;;1;00000;1;1;1;0;D;;;;
-ECSF;wind_speed_of_gust;3;49;6004;;1;00000;1;1;1;0;D;;;;
-ECBSF;air_temperature;3;130;6003;;1;00000;1;1;1;0;D;;;;
-ECBSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6003;;0;00000;1;1;1;0;D;;;;
-ECBSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6003;;0;00007;1;1;1;0;D;;;;
-ECBSF;mole_concentration_of_carbon_dioxide_in_air;3;248;6003;;0;00028;1;1;1;0;D;;;;
-ECBSF;surface_snow_density;3;33;6003;;1;00000;1;1;1;0;D;;;;
-ECBSF;wind_speed;3;10;6003;;1;00000;1;1;1;0;D;;;;
-ECBSF;x_wind;3;131;6003;;1;00000;1;1;1;0;D;;;;
-ECBSF;y_wind;3;132;6003;;1;00000;1;1;1;0;D;;;;
-ECB2SF;air_temperature;3;130;6001;;1;00000;1;1;1;0;D;;;;
-ECB2SF;mole_concentration_of_carbon_dioxide_in_air;3;248;6001;;0;00000;1;1;1;0;D;;;;
-ECB2SF;mole_concentration_of_carbon_dioxide_in_air;3;248;6001;;0;00007;1;1;1;0;D;;;;
-ECB2SF;mole_concentration_of_carbon_dioxide_in_air;3;248;6001;;0;00028;1;1;1;0;D;;;;
-ECB2SF;surface_snow_density;3;33;6001;;1;00000;1;1;1;0;D;;;;
-ECB2SF;wind_speed;3;10;6001;;1;00000;1;1;1;0;D;;;;
-ECB2SF;x_wind;3;131;6001;;1;00000;1;1;1;0;D;;;;
-ECB2SF;y_wind;3;132;6001;;1;00000;1;1;1;0;D;;;;
-ECMARK5;mole_concentration_of_carbon_dioxide_in_air;3;248;26;;0;00000;1;1;1;0;D;;;;
-ECFWI;mole_concentration_of_carbon_dioxide_in_air;3;248;26;;0;00000;1;1;1;0;D;;;;
