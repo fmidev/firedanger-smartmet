@@ -1,8 +1,8 @@
 {
-    "title": "ECSF Pressure in Pascals",
-    "abstract": "Pressure isobands every two Pascals",
+    "title": "EC Mean Sea Level Pressure Isobands",
+    "abstract": "PSEA-PA Mean sea level pressure (Pa) from ECMWF forecast model",
     "projection": {},
-    "producer": "ECSF",
+    "producer": "ERA5",
     "source": "grid",
     "views":[{
         "layers": [{
@@ -10,7 +10,7 @@
             "layer_type": "isoband",
             "isobands": "json:isobands/pressure_pa.json",
             "css": "isobands/pressure.css",
-            "parameter": "P-PA:ECSF::1:0:1",
+            "parameter": "PSEA-PA:ERA5::1:0:1",
             "sampling":{
                 "relativeresolution": 4
             },

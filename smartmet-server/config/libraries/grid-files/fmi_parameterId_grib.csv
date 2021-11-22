@@ -359,7 +359,7 @@ CRNK-N;148;;;
 # 150:Top net radiation (J m-2)
 
 # 151:Mean sea level pressure (Pa)
-PSEA-HPA;151;;;
+PSEA-PA;151;;;
 
 # 152:Logarithm of surface pressure (~)
 LNSP-N;152;;;

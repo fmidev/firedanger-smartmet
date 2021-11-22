@@ -1,0 +1,23 @@
+{
+    "title": "EC CAMS PM10 Isobands",
+    "abstract": "PM10-UGM3 Particulate matter d < 10 ug (ug m-3) from ECMWF CAMS.",
+    "projection": {},
+    "producer": "CAMS",
+    "source": "grid",
+    "views":[{
+        "layers": [{
+            "qid": "l",
+            "layer_type": "isoband",
+            "isobands": "json:isobands/particulate_matter.json",
+            "css": "isobands/particulate_matter.css",
+            "parameter": "PM10-UGM3:CAMS::1:0:1:0",
+                "sampling":{
+                "relativeresolution": 4
+            },
+            "attributes": {
+                "shape-rendering": "crispEdges"
+            }
+        }]
+    }]
+}
+~  
