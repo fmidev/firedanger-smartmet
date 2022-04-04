@@ -26,13 +26,13 @@ For more information and examples of the usage of the TimeSeries plugin, see Sma
 
 Dali is the engine to make images from smartmet-server internal data. It can be used directly or with appropriate layer definitions can provide an OGC compliant WebMapService interface. Open Geospatial Consortiums (OGC) Web Map Service (WMS) offers a convenient way for generating map images from a map server over the Web using the HTTP protocol. Several image products can be generated using the SmartMet Server WMS plugin. 
 
-An example WMS request to the server (ECBSF temperature in Kelvins):
+An example WMS request to the server (CAMS Total aerosol optical depth at 550nm):
 
-`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:isobands:ECSF_TAS-K&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=800&WIDTH=400&20210902T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50`
+`https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:isobands:CAMS_AOD550&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=800&WIDTH=400&20220302T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50`
 
 An example response for this query is shown below: 
 
-![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:isobands:ECSF_TAS-K&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=800&WIDTH=400&20210902T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50)
+![WMS layer](https://smart.nsdc.fmi.fi/wms?&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=gui:isobands:CAMS_AOD550&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=800&WIDTH=400&20220302T000000&CRS=EPSG:4326&BBOX=-60,-80,-10,-50)
 
 Available WMS 'LAYERS' can be checked with the GetCapabilities request as follows: 
 
