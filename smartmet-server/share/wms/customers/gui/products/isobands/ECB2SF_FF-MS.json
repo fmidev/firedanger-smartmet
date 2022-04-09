@@ -1,0 +1,23 @@
+{
+    "title": "ECB2SF Wind Speed Isobands",
+    "abstract": "FF-MS Wind speed (m/s) from ECMWF.",
+    "projection": {},
+    "producer": "ECB2SF",
+    "source": "grid",
+    "views":[{
+        "layers": [{
+            "qid": "l", 
+            "layer_type": "isoband",
+            "isobands": "json:isobands/windspeed_ms.json",
+            "css": "isobands/windspeed_ms.css",
+            "parameter": "FF-MS:ECB2SF::1:0:1:0",
+            "sampling":{
+                "relativeresolution": 4
+            },
+            "attributes": {
+                "shape-rendering": "crispEdges"
+            }
+        }]
+    }]
+}
+

@@ -1,0 +1,22 @@
+{
+    "title": "ECBSF Volumetric Soil Water Layer 1",
+    "abstract": "SWVL1-M3M3 Volumetric soil water layer 1 (m3 m-3) from ECMWF.",
+    "projection": {},
+    "producer": "ECBSF",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/volsoilwater.json",
+	    "css": "isobands/volsoilwater.css",
+	    "parameter": "SWVL1-M3M3:ECBSF:::7:1:0",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

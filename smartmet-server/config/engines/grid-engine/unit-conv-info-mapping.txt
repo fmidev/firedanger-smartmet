@@ -1,0 +1,14 @@
+Annin muistiinpanoja yksikkömuunnoksista smart.nsdc.fmi.fi parametreille. 
+
+### CAMS ###
+kg/m^2 -> 10^15 molecules/cm^2 (muuttuja kerrotaan Na*1000/(10 000*MW*10^15)), jossa MW molecular weight muuttujalle, Na Avogadron nro):
+TCNO-KGM2, TCNO2-KGM2, TCHCHO-KGM2, TCSO2-KGM2, TCC2H6I-KGM2, TCC3H8-KGM2, TCC5H8-KGM2, TCH2O2-KGM2, TCHNO3-KGM2, TCOH-KGM2, TCPAN-KGM2  
+TCCO-KGM2: 10^18 molecules/cm^2
+TCCH4-KGM2: 10^19 molecules/cm^2
+
+kg/m^2 -> DU: 
+GTCO3-KGM2
+
+
+
+    

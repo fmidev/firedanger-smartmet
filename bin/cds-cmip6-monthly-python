@@ -1,0 +1,5 @@
+#!/bin/bash
+MOD="$1"
+VAR="$2"
+
+python3 cds-cmip6-monthly.py "$MOD" "$VAR"

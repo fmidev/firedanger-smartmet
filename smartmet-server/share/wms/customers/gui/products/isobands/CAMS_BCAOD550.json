@@ -1,0 +1,22 @@
+{
+    "title": "CAMS Black Carbon Aerosol Optical Depth (550 nm)",
+    "abstract": "BCAOD550 Black carbon aerosol optical depth at 550 nm from ECMWF.",
+    "projection": {},
+    "producer": "CAMS",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/aerosolOpticalDepth.json",
+	    "css": "isobands/aerosolOpticalDepth.css",
+	    "parameter": "BCAOD550:CAMS::1:0:1:0",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

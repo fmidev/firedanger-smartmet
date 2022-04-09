@@ -1,0 +1,22 @@
+{
+    "title": "CAMS Total Aerosol Optical Depth (856 nm)",
+    "abstract": "AOD865 Total aerosol optical depth at 865 nm from ECMWF.",
+    "projection": {},
+    "producer": "CAMS",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/aerosolOpticalDepth.json",
+	    "css": "isobands/aerosolOpticalDepth.css",
+	    "parameter": "AOD865:CAMS::1:0:1:0",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

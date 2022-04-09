@@ -1,0 +1,97 @@
+[
+  {
+    "qid": "Evaporation_50_inf",
+    "lolimit": 50,
+    "attributes": {
+      "class": "Evaporation_50_inf"
+    }
+  },
+  {
+    "qid": "Evaporation_40_50",
+    "lolimit": 40,
+    "hilimit": 50,
+    "attributes": {
+      "class": "Evaporation_40_50"
+    }
+  },
+  {
+    "qid": "Evaporation_30_40",
+    "lolimit": 30,
+    "hilimit": 40,
+    "attributes": {
+      "class": "Evaporation_30_40"
+    }
+  },
+  {
+    "qid": "Evaporation_20_30",
+    "lolimit": 20,
+    "hilimit": 30,
+    "attributes": {
+      "class": "Evaporation_20_30"
+    }
+  },
+  {
+    "qid": "Evaporation_15_20",
+    "lolimit": 15,
+    "hilimit": 20,
+    "attributes": {
+      "class": "Evaporation_15_20"
+    }
+  },
+  {
+    "qid": "Evaporation_10_15",
+    "lolimit": 10,
+    "hilimit": 15,
+    "attributes": {
+      "class": "Evaporation_10_15"
+    }
+  },
+  {
+    "qid": "Evaporation_8_10",
+    "lolimit": 8,
+    "hilimit": 10,
+    "attributes": {
+      "class": "Evaporation_8_10"
+    }
+  },
+  {
+    "qid": "Evaporation_6_8",
+    "lolimit": 6,
+    "hilimit": 8,
+    "attributes": {
+      "class": "Evaporation_6_8"
+    }
+  },
+  {
+    "qid": "Evaporation_4_6",
+    "lolimit": 4,
+    "hilimit": 6,
+    "attributes": {
+      "class": "Evaporation_4_6"
+    }
+  },
+  {
+    "qid": "Evaporation_2_4",
+    "lolimit": 2,
+    "hilimit": 4,
+    "attributes": {
+      "class": "Evaporation_2_4"
+    }
+  },
+  {
+    "qid": "Evaporation_1_2",
+    "lolimit": 1,
+    "hilimit": 2,
+    "attributes": {
+      "class": "Evaporation_1_2"
+    }
+  }, 
+  {
+    "qid": "Evaporation_inf_1",
+    "hilimit": 1,
+    "attributes": {
+      "class": "Evaporation_inf_1"
+    }
+  }
+]
+

@@ -1,6 +1,6 @@
 {
-    "title": "EC Instantaneous Wind Speed Isobands",
-    "abstract": "FFG-MS Instantaneous wind speed (m/s) from ECMWF forecast model.",
+    "title": "ECSF Instantaneous Wind Speed Isobands",
+    "abstract": "FFG-MS Instantaneous wind speed (m/s) from ECMWF.",
     "projection": {},
     "producer": "ECSF",
     "source": "grid",

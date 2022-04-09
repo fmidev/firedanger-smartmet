@@ -1,33 +1,13 @@
-.Pressure_970    	{ stroke:none; fill: rgb(56,104,235) }
-.Pressure_970_972	{ stroke:none; fill: rgb(111,154,247) }
-.Pressure_972_974	{ stroke:none; fill: rgb(148,178,242) }
-.Pressure_974_976	{ stroke:none; fill: rgb(0,80,171) }
-.Pressure_976_978	{ stroke:none; fill: rgb(6,98,196) }
-.Pressure_978_980	{ stroke:none; fill: rgb(24,122,219) } 
-.Pressure_980_982	{ stroke:none; fill: rgb(17,141,250) }
-.Pressure_982_984	{ stroke:none; fill: rgb(64,169,255) }
-.Pressure_984_986	{ stroke:none; fill: rgb(101,189,247) }
-.Pressure_986_988	{ stroke:none; fill: rgb(0,103,140) }
-.Pressure_988_990	{ stroke:none; fill: rgb(2,123,163) }
-.Pressure_990_992	{ stroke:none; fill: rgb(0,155,186) }
-.Pressure_992_994	{ stroke:none; fill: rgb(34,188,212) }
-.Pressure_994_996	{ stroke:none; fill: rgb(103,219,230) }
-.Pressure_996_998 	{ stroke:none; fill: rgb(163,243,247) }      
-.Pressure_998_1000	{ stroke:none; fill: rgb(212,255,255) }
-.Pressure_1000_1002     { stroke:none; fill: rgb(5,179,138) }	
-.Pressure_1002_1004	{ stroke:none; fill: rgb(2,212,149) }
-.Pressure_1004_1006	{ stroke:none; fill: rgb(138,237,187) }
-.Pressure_1006_1008	{ stroke:none; fill: rgb(204,255,208) }
-.Pressure_1008_1010	{ stroke:none; fill: rgb(235,252,207) }
-.Pressure_1010_1012	{ stroke:none; fill: rgb(235,255,122) }
-.Pressure_1012_1014	{ stroke:none; fill: rgb(255,234,128) }
-.Pressure_1014_1016	{ stroke:none; fill: rgb(247,212,35) }
-.Pressure_1016_1018	{ stroke:none; fill: rgb(245,180,0) }
-.Pressure_1018_1020	{ stroke:none; fill: rgb(242,149,0) }
-.Pressure_1020_1022	{ stroke:none; fill: rgb(240,116,0) }
-.Pressure_1022_1024	{ stroke:none; fill: rgb(255,83,36) }
-.Pressure_1024_1026     { stroke:none; fill: rgb(247,23,7) }
-.Pressure_1026_1028     { stroke:none; fill: rgb(219,10,7) }
-.Pressure_1028_1030     { stroke:none; fill: rgb(189,4,4) }
-.Pressure_1030          { stroke:none; fill: rgb(156,2,20) }
-
+.Pressure_1035_inf  	{ stroke: none; fill: rgb(254,143,0) }
+.Pressure_1031_1035  	{ stroke: none; fill: rgb(254,181,0) }
+.Pressure_1027_1031 	{ stroke: none; fill: rgb(254,218,0) }
+.Pressure_1023_1027   	{ stroke: none; fill: rgb(254,254,0) }
+.Pressure_1019_1023  	{ stroke: none; fill: rgb(199,255,19) }
+.Pressure_1015_1019  	{ stroke: none; fill: rgb(150,254,0) }
+.Pressure_1011_1015 	{ stroke: none; fill: rgb(100,254,0) }
+.Pressure_1007_1011   	{ stroke: none; fill: rgb(50,236,0) }
+.Pressure_1003_1007	{ stroke: none; fill: rgb(0,209,0) }
+.Pressure_999_1003	{ stroke: none; fill: rgb(0,176,0) }
+.Pressure_995_999	{ stroke: none; fill: rgb(0,209,70) }
+.Pressure_991_995	{ stroke: none; fill: rgb(9,231,140) }
+.Pressure_inf_991  	{ stroke: none; fill: rgb(28,240,209) }

@@ -1,0 +1,97 @@
+[
+  {
+    "qid": "Particulatematter_500_inf",
+    "lolimit": 500,
+    "attributes": {
+      "class": "Particulatematter_500_inf"
+    }
+  },
+  {
+    "qid": "Particulatematter_300_500",
+    "lolimit": 300,
+    "hilimit": 500,
+    "attributes": {
+      "class": "Particulatematter_300_500"
+    }
+  },
+  {
+    "qid": "Particulatematter_200_300",
+    "lolimit": 200,
+    "hilimit": 300,
+    "attributes": {
+      "class": "Particulatematter_200_300"
+    }
+  },
+  {
+    "qid": "Particulatematter_150_200",
+    "lolimit": 150,
+    "hilimit": 200,
+    "attributes": {
+      "class": "Particulatematter_150_200"
+    }
+  },
+  {
+    "qid": "Particulatematter_100_150",
+    "lolimit": 100,
+    "hilimit": 150,
+    "attributes": {
+      "class": "Particulatematter_100_150"
+    }
+  },
+  {
+    "qid": "Particulatematter_80_100",
+    "lolimit": 80,
+    "hilimit": 100,
+    "attributes": {
+      "class": "Particulatematter_80_100"
+    }
+  },
+  {
+    "qid": "Particulatematter_60_80",
+    "lolimit": 60,
+    "hilimit": 80,
+    "attributes": {
+      "class": "Particulatematter_60_80"
+    }
+  },
+  {
+    "qid": "Particulatematter_50_60",
+    "lolimit": 50,
+    "hilimit": 60,
+    "attributes": {
+      "class": "Particulatematter_50_60"
+    }
+  },
+  {
+    "qid": "Particulatematter_40_50",
+    "lolimit": 40,
+    "hilimit": 50,
+    "attributes": {
+      "class": "Particulatematter_40_50"
+    }
+  },
+  {
+    "qid": "Particulatematter_30_40",
+    "lolimit": 30,
+    "hilimit": 40,
+    "attributes": {
+      "class": "Particulatematter_30_40"
+    }
+  },
+  {
+    "qid": "Particulatematter_20_30",
+    "lolimit": 20,
+    "hilimit": 30,
+    "attributes": {
+      "class": "Particulatematter_20_30"
+    }
+  },
+  {
+    "qid": "Particulatematter_inf_20",
+    "hilimit": 20,
+    "attributes": {
+      "class": "Particulatematter_inf_20"
+    }
+  }
+]
+

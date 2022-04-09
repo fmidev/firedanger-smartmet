@@ -5,6 +5,9 @@
 # add era5 as a third attribute on the command line for this and you have to define year and month for this case
 #
 # 14.9.2020 Mikko Strahlendorff
+#
+# add fetching and postprocessing pressurelevel data 850,700,500 hPa
+# 5.3.2022 Mikko Strahlendorff/Anni Kröger
 eval "$(conda shell.bash hook)"
 if [ $# -ne 0 ]
 then
@@ -27,11 +30,12 @@ emonth=$(date -d "$year${month}01 7 months" +%m)
 echo "$bsf $era y: $year m: $month ending $eyear-$emonth"
 ## Fetch seasonal data from CDS-API
 [ -f ec-sf-$year$month-all-24h-sam.grib ] && echo "SF Data file already downloaded" || /home/users/smartmet/bin/cds-sf-all-24h.py $year $month
+[ -f ec-sf-$year$month-pl-12h-sam.grib ] && echo "SF pressurelevel Data file already downloaded" || /home/users/smartmet/bin/cds-sf-pl-12h.py $year $month
 
 # ensure new eccodes and cdo
 conda activate xr
 [ -f ens/ec-sf_$year${month}_all-24h-sam-50.grib ] && echo "Ensemble member files ready" || grib_copy ec-sf-$year$month-all-24h-sam.grib ens/ec-sf_$year${month}_all-24h-sam-[number].grib
-## Make bias-adjustement
+## Make bias-adjustement for single level parameters
 ### adjust unbound variables
 [ -f ens/ec-sf_$year${month}_all-24h-sam-50.grib ] && ! [ -f ens/ec-${bsf}_$year${month}_unbound-24h-sam-50.grib ] && \
  seq 0 50 | parallel cdo -s -b P8 -O --eccodes ymonadd \
@@ -64,7 +68,7 @@ conda activate xr
 ## Make stl2,3,4 from stl1
 #[ -f ens/ec-sf_$year${month}_all-24h-sam-50.grib ] && ! [ -f ens/ec-${bsf}_$year${month}_stl-24h-sam-50.grib ] && \
 # seq 0 50 |parallel -q cdo -s --eccodes -O -b P8 ymonadd -aexpr,'stl2=stl1;stl3=stl1;stl4=stl1;' -remap,$era-sam-grid,ec-sf-$era-sam-weights.nc -selname,stl1 ens/ec-sf_$year${month}_all-24h-sam-{}.grib \
-#    -selname,stl1,stl2,stl3,stl4 $era/$era-stls-diff+bias-climate-eu.grib ens/ec-${bsf}_$year${month}_stl-24h-sam-{}.grib \
+#    -selname,stl1,stl2,stl3,stl4 $era/$era-stls-diff+bias-climate-sam.grib ens/ec-${bsf}_$year${month}_stl-24h-sam-{}.grib \
 #    || echo "NOT making stl levels 2,3,4 - seasonal forecast input missing or already produced"
 # cdo -s correcting levels for stl2,3,4 segfaults with the below operator:
 # changemulti,\'$'(170;*;7|170;*;28);(183;*;7|183;*;100);(236;*;7|236;*;289);'\'
@@ -87,22 +91,33 @@ conda activate xr
     ens/ec-${bsf}_$year${month}_stl-24h-sam-{}-fixed.grib || echo "NOT fixing stl gribs attributes - no input or already produced"
 
 ## join ensemble members and move to grib folder
-[ -f ens/ec-${bsf}_$year${month}_unbound-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_unbound-24h-eu.grib ] &&\
- grib_copy ens/ec-${bsf}_$year${month}_unbound-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_unbound-24h-eu.grib &
-[ -f ens/ec-${bsf}_$year${month}_snow-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_snow-24h-eu.grib ] &&\
- grib_copy ens/ec-${bsf}_$year${month}_snow-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_snow-24h-eu.grib &
-[ -f ens/ec-${bsf}_$year${month}_bound-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_bound-24h-eu.grib ] &&\
- grib_copy ens/ec-${bsf}_$year${month}_bound-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_bound-24h-eu.grib &
-[ -f ens/ec-${bsf}_$year${month}_acc-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_acc-24h-eu.grib ] &&\
- grib_copy ens/ec-${bsf}_$year${month}_acc-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_acc-24h-eu.grib &
-[ -f ens/ec-${bsf}_$year${month}_stl-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_stl-24h-eu.grib ] &&\
- grib_copy ens/ec-${bsf}_$year${month}_stl-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_stl-24h-eu.grib &
+[ -f ens/ec-${bsf}_$year${month}_unbound-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_unbound-24h-sam.grib ] &&\
+ grib_copy ens/ec-${bsf}_$year${month}_unbound-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_unbound-24h-sam.grib &
+[ -f ens/ec-${bsf}_$year${month}_snow-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_snow-24h-sam.grib ] &&\
+ grib_copy ens/ec-${bsf}_$year${month}_snow-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_snow-24h-sam.grib &
+[ -f ens/ec-${bsf}_$year${month}_bound-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_bound-24h-sam.grib ] &&\
+ grib_copy ens/ec-${bsf}_$year${month}_bound-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_bound-24h-sam.grib &
+[ -f ens/ec-${bsf}_$year${month}_acc-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_acc-24h-sam.grib ] &&\
+ grib_copy ens/ec-${bsf}_$year${month}_acc-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_acc-24h-sam.grib &
+[ -f ens/ec-${bsf}_$year${month}_stl-24h-sam-50-fixed.grib ] && [ ! -f grib/EC${bsf}_$year${month}01T000000_stl-24h-sam.grib ] &&\
+ grib_copy ens/ec-${bsf}_$year${month}_stl-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_stl-24h-sam.grib &
 wait
 rm ens/ec-${bsf}_$year${month}_*-24h-sam-*.grib
 # add snow depth to ECSF
 [ -f ec-sf-$year$month-all-24h-sam.grib ] && [ ! -f grib/ECSF_$year${month}01T000000_all-24h-sam.grib ] &&\
  cdo -s --eccodes -O aexprf,ec-sde.instr ec-sf-$year$month-all-24h-sam.grib grib/ECSF_$year${month}01T000000_all-24h-sam.grib ||\
  echo "NOT adding ECSF snow - no input or already produced"
+
+## Post-process pressure level data
+# calculate variables vapour pressures, dew point temps, k-index and add them to the data set
+[ -f ec-sf-$year$month-pl-12h-sam.grib ] && [ ! -f grib/ECSF_$year${month}01T000000_pl-pp-12h-sam.grib ] && \
+ cdo --eccodes -O -b P12 \
+	aexpr,'kx=sellevel(t,85000)-sellevel(t,50000)+sellevel(dpt,85000)-(sellevel(t,70000)-sellevel(dpt,70000));' \
+	-aexpr,'dpt=log(vp/6.112)*243.5/(17.67-log(vp/6.112));' -aexpr,'ws=sqrt(u^2+v^2);' \
+    -aexpr,'wdir=180+180/3.14159265*2*atan(v/(sqr(u^2+v^2)+u));' \
+	-aexpr,'vp=clev(q)*q/(0.622+0.378*q);' ec-sf-$year$month-pl-12h-sam.grib \
+	grib/ECSF_$year${month}01T000000_pl-pp-12h-sam.grib ||\
+ echo "NOT adding ECSF pressure level - no input or already produced"
 
 # produce forcing file for HOPS
 # mod. M.Kosmale 18.03.2021: called now independently from cron (v3)

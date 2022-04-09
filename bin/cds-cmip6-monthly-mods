@@ -1,0 +1,41 @@
+#!/bin/bash
+
+bash cds-cmip6-monthly-vars access_cm2
+bash cds-cmip6-monthly-vars awi_cm_1_1_mr
+bash cds-cmip6-monthly-vars canesm5_canoe
+bash cds-cmip6-monthly-vars cmcc_cm2_hr4
+bash cds-cmip6-monthly-vars cmcc_esm2
+bash cds-cmip6-monthly-vars cnrm_cm6_1_hr
+bash cds-cmip6-monthly-vars ec_earth3_aerchem
+bash cds-cmip6-monthly-vars fgoals_f3_l
+bash cds-cmip6-monthly-vars hadgem3_gc31_ll
+bash cds-cmip6-monthly-vars iitm_esm
+bash cds-cmip6-monthly-vars inm_cm5_0
+bash cds-cmip6-monthly-vars miroc6
+bash cds-cmip6-monthly-vars miroc_es2l
+bash cds-cmip6-monthly-vars mpi_esm1_2_hr
+bash cds-cmip6-monthly-vars mri_esm2_0
+bash cds-cmip6-monthly-vars norcpm1
+bash cds-cmip6-monthly-vars access_esm1_5
+bash cds-cmip6-monthly-vars awi_esm_1_1_lr
+bash cds-cmip6-monthly-vars bcc_esm1
+bash cds-cmip6-monthly-vars canesm5
+bash cds-cmip6-monthly-vars cmcc_cm2_sr5
+bash cds-cmip6-monthly-vars cnrm_esm2_1
+bash cds-cmip6-monthly-vars ec_earth3_cc
+bash cds-cmip6-monthly-vars gfdl_esm4
+bash cds-cmip6-monthly-vars hadgem3_gc31_mm
+bash cds-cmip6-monthly-vars inm_cm4_8
+bash cds-cmip6-monthly-vars ipsl_cm5a2_inca
+bash cds-cmip6-monthly-vars kace_1_0_g
+bash cds-cmip6-monthly-vars mcm_ua_1_0
+bash cds-cmip6-monthly-vars mpi_esm1_2_lr
+bash cds-cmip6-monthly-vars nesm3
+bash cds-cmip6-monthly-vars ukesm1_0_ll
+
+
+
+
+
+
+

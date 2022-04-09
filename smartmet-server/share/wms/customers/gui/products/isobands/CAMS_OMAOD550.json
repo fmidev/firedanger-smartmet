@@ -1,0 +1,22 @@
+{
+    "title": "CAMS Organic Matter Aerosol Optical Depth (550 nm)",
+    "abstract": "OMAOD550 Organic matter aerosol optical depth at 550 nm from ECMWF.",
+    "projection": {},
+    "producer": "CAMS",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/aerosolOpticalDepth.json",
+	    "css": "isobands/aerosolOpticalDepth.css",
+	    "parameter": "OMAOD550:CAMS::1:0:1:0",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

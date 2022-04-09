@@ -1,6 +1,6 @@
 {
-    "title": "EC 2 Metre Temperature Isobands",
-    "abstract": "TAS-K 2 metre temperature (K) from ECMWF forecast model.",
+    "title": "ECSF 2 Metre Temperature Isobands (Kelvin)",
+    "abstract": "TAS-K 2 metre temperature (K) from ECMWF.",
     "projection": {},
     "producer": "ECSF",
     "source": "grid",

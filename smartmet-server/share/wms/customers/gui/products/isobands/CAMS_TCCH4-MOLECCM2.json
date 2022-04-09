@@ -1,0 +1,22 @@
+{
+    "title": "CAMS Total Column Methane",
+    "abstract": "TCCH4-MOLECCM2 Total column methane from ECMWF.",
+    "projection": {},
+    "producer": "CAMS",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/TCemissions.json",
+	    "css": "isobands/TCemissions.css",
+	    "parameter": "TCCH4-MOLECCM2:CAMS::1:0:1:0",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

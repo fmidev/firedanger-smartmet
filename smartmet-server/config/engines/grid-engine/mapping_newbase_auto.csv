@@ -48,6 +48,8 @@
 #         2 = Nearest
 #         3 = Min
 #         4 = Max
+#         9 = Landscape
+#         10 = Forbidden
 #         500..999 = List
 #         1000..65535 = External (interpolated by an external function)
 # 10) Time interpolation method
@@ -56,6 +58,8 @@
 #         2 = Nearest
 #         3 = Min
 #         4 = Max
+#         6 = Previous
+#         7 = Next
 #         1000..65535 = External (interpolated by an external function)
 # 11) Level interpolation method
 #         0 = None
@@ -64,9 +68,12 @@
 #         3 = Min
 #         4 = Max
 #         5 = Logarithmic
+#         6 = Previous
+#         7 = Next
 #         1000..65535 = External (interpolated by an external function)
 # 12) Group flags
-#         bit 0 = Climatological parameter (=> ignore year when searching) 
+#         bit 0 = Climatological parameter (=> ignore year when searching)
+#         bit 1 = Global parameter (=> ignore timestamp when searching, for example LandSeaMask)
 # 13) Search match (Can this mapping used when searching mappings for incomplete parameters)
 #         E = Enabled
 #         D = Disabled
@@ -75,3 +82,62 @@
 # 15) Reverse mapping function
 # 16) Default precision
 # 
+ECSF;DewPoint;2;TD-K;6004;;2;00500;1;1;1;0;D;SUM{$,-273.15};SUM{$,273.15};;;;
+ECSF;DewPoint;2;TD-K;6004;;2;00700;1;1;1;0;D;SUM{$,-273.15};SUM{$,273.15};;;;
+ECSF;DewPoint;2;TD-K;6004;;2;00850;1;1;1;0;D;SUM{$,-273.15};SUM{$,273.15};;;;
+ECSF;GeopHeight;2;Z-M2S2;6004;;2;00500;1;1;1;0;D;MUL{$,0.102000};DIV{$,0.102000};;;;
+ECSF;GeopHeight;2;Z-M2S2;6004;;2;00700;1;1;1;0;D;MUL{$,0.102000};DIV{$,0.102000};;;;
+ECSF;GeopHeight;2;Z-M2S2;6004;;2;00850;1;1;1;0;D;MUL{$,0.102000};DIV{$,0.102000};;;;
+ECSF;Temperature;2;T-K;6004;;2;00500;1;1;1;0;D;SUM{$,-273.15};SUM{$,273.15};;;;
+ECSF;Temperature;2;T-K;6004;;2;00700;1;1;1;0;D;SUM{$,-273.15};SUM{$,273.15};;;;
+ECSF;Temperature;2;T-K;6004;;2;00850;1;1;1;0;D;SUM{$,-273.15};SUM{$,273.15};;;;
+ECSF;VolumetricSoilWaterLayer1;2;FMI-0;6004;;0;00500;1;1;1;0;D;;;;
+ECSF;VolumetricSoilWaterLayer1;2;FMI-0;6004;;0;00700;1;1;1;0;D;;;;
+ECSF;VolumetricSoilWaterLayer1;2;FMI-0;6004;;0;00850;1;1;1;0;D;;;;
+ECSF;WindDirection;2;DD-D;6004;;2;00500;1;1;1;0;D;;;;;;
+ECSF;WindDirection;2;DD-D;6004;;2;00700;1;1;1;0;D;;;;;;
+ECSF;WindDirection;2;DD-D;6004;;2;00850;1;1;1;0;D;;;;;;
+ECSF;WindSpeedMS;2;FF-MS;6004;;2;00500;1;1;1;0;D;;;;;;
+ECSF;WindSpeedMS;2;FF-MS;6004;;2;00700;1;1;1;0;D;;;;;;
+ECSF;WindSpeedMS;2;FF-MS;6004;;2;00850;1;1;1;0;D;;;;;;
+ECSF;WindUMS;2;U-MS;6004;;2;00500;2;2;2;0;D;;;;;;
+ECSF;WindUMS;2;U-MS;6004;;2;00700;2;2;2;0;D;;;;;;
+ECSF;WindUMS;2;U-MS;6004;;2;00850;2;2;2;0;D;;;;;;
+ECSF;WindVMS;2;V-MS;6004;;2;00500;2;2;2;0;D;;;;;;
+ECSF;WindVMS;2;V-MS;6004;;2;00700;2;2;2;0;D;;;;;;
+ECSF;WindVMS;2;V-MS;6004;;2;00850;2;2;2;0;D;;;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00000;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00001;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00002;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00003;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00004;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00005;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00006;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00007;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00008;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00009;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00010;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00011;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00012;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00013;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00014;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00015;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00016;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00017;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00018;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00019;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00020;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00021;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00022;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00023;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00024;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00025;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00026;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00027;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00028;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00029;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00030;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00031;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00032;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00033;1;1;1;0;D;;;;
+S5P;VolumetricSoilWaterLayer1;2;FMI-0;6005;;0;00034;1;1;1;0;D;;;;

@@ -1,0 +1,22 @@
+{
+    "title": "ECSF Minimum 24h Temperature Isobands (Celsius)",
+    "abstract": "TMAX-24-C Minimum temperature on the preceding 24 hours period of the date-value (C) from ECMWF.",
+    "projection": {},
+    "producer": "ECSF",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/temperature_C.json",
+	    "css": "isobands/temperature.css",
+	    "parameter": "TMIN-24-C:ECSF::1:0:1",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

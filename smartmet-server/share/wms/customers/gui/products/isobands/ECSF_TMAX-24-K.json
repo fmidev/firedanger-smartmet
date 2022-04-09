@@ -1,23 +1,22 @@
 {
-    "title": "Maximum temperature at 2 metres in the last 24h, in Kelvins",
-    "abstract": "Temperature isobands every two degrees",
+    "title": "ECSF Maximum 24h Temperature Isobands (Kelvin)",
+    "abstract": "TMAX-24-K Maximum temperature on the preceding 24 hours period of the date-value (K) from ECMWF.",
     "projection": {},
     "producer": "ECSF",
     "source": "grid",
     "views":[{
-        "layers": [{
-            "qid": "l", 
-            "layer_type": "isoband",
-            "isobands": "json:isobands/temperature_K.json",
-            "css": "isobands/temperature.css",
-            "parameter": "GRIB-51:ECSF::1:0:1",
-            "sampling":{
-                "relativeresolution": 4
-            },
-            "attributes": {
-                "shape-rendering": "crispEdges"
-            }
-        }]
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/temperature_K.json",
+	    "css": "isobands/temperature.css",
+	    "parameter": "TMAX-24-K:ECSF::1:0:1",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
     }]
 }
-

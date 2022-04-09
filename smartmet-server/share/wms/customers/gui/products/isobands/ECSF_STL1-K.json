@@ -1,0 +1,22 @@
+{
+    "title": "ECSF Soil Temperature Level 1 Isobands (Kelvin)",
+    "abstract": "STL1-K Soil temperature level 1 (K) from ECMWF.",
+    "projection": {},
+    "producer": "ECSF",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/temperature_K.json",
+	    "css": "isobands/temperature.css",
+	    "parameter": "STL1-K:ECSF:::7:1",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

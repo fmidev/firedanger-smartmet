@@ -1,0 +1,22 @@
+{
+    "title": "CAMS Sea Salt Aerosol Optical Depth (550 nm)",
+    "abstract": "SSAOD550 Sea salt aerosol optical depth at 550 nm from ECMWF.",
+    "projection": {},
+    "producer": "CAMS",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/aerosolOpticalDepth.json",
+	    "css": "isobands/aerosolOpticalDepth.css",
+	    "parameter": "SSAOD550:CAMS::1:0:1:0",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

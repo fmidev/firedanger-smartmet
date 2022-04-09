@@ -1,0 +1,22 @@
+{
+    "title": "CAMS Total Column Nitrogen Monoxide",
+    "abstract": "TCNO-MOLECCM2 Total column nitrogen monoxide from ECMWF.",
+    "projection": {},
+    "producer": "CAMS",
+    "source": "grid",
+    "views":[{
+	"layers": [{
+	    "qid": "l", 
+	    "layer_type": "isoband",
+	    "isobands": "json:isobands/TCemissions.json",
+	    "css": "isobands/TCemissions.css",
+	    "parameter": "TCNO-MOLECCM2:CAMS::1:0:1:0",
+		"sampling":{
+		"relativeresolution": 4
+	    },
+	    "attributes": {
+		"shape-rendering": "crispEdges"
+	    }
+	}]
+    }]
+}

@@ -1,0 +1,10 @@
+#!/bin/bash
+MOD="$1"
+
+bash cds-cmip6-monthly-python "$MOD" near_surface_air_temperature
+bash cds-cmip6-monthly-python "$MOD" precipitation
+bash cds-cmip6-monthly-python "$MOD" northward_near_surface_wind
+bash cds-cmip6-monthly-python "$MOD" eastward_near_surface_wind
+bash cds-cmip6-monthly-python "$MOD" sea_level_pressure
+bash cds-cmip6-monthly-python "$MOD" surface_air_pressure
+bash cds-cmip6-monthly-python "$MOD" near_surface_specific_humidity
