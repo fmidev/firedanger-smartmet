@@ -1318,6 +1318,7 @@ RADGLO-WM2;3116;;;
 # 130212:Cloud liquid water (kg kg-1)
 
 # 130213:Cloud fraction ((0 - 1))
+CF-0TO1;130213;;;
 
 # 130214:Diabatic heating by radiation (K s-1)
 
@@ -4127,6 +4128,9 @@ TCSO2-KGM2;210126;;;
 # 210127:Total column Carbon monoxide (kg m-2)
 TCCO-KGM2;210127;;;
 
+# 500127: Total column Carbon monoxide (mol m-2) 
+#TCCO-MOLM2;500127;;; 
+
 # 210128:Total column Formaldehyde (kg m-2)
 TCHCHO-KGM2;210128;;;
 
@@ -4286,6 +4290,7 @@ AOD865;210215;;;
 AOD1240;210216;;;
 
 # 210217:Total aerosol optical depth at 340 nm (~)
+AOD340;210217;;;
 
 # 210218:Total aerosol optical depth at 355 nm (~)
 
@@ -5440,6 +5445,7 @@ UVBEDCS;214003;;;
 # 214051:Clear-sky surface UV spectral flux (395-400 nm) (W m-2)
 
 # 214052:Profile of optical thickness at 340 nm (~)
+AOT340;214052;;;
 
 # 215001:Source/gain of sea salt aerosol (0.03 - 0.5 um) (kg m-2 s-1)
 

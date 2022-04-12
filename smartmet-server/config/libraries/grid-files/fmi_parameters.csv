@@ -1355,10 +1355,12 @@
 10210208;SSAOD550;JustAnumber;Sea salt aerosol optical depth at 550 nm;
 10210212;SUAOD550;JustAnumber;Suplhate aerosol optical depth at 550 nm;
 10210216;AOD1240;JustAnumber;Total aerosol optical depth at 1240 nm;
+10210217;AOD340;JustAnumber;Total aerosol optical depth at 340 nm;
 10210213;AOD469;JustAnumber;Total aerosol optical depth at 469 nm;
 10210207;AOD550;JustAnumber;Total aerosol optical depth at 550 nm;
 10210214;AOD670;JustAnumber;Total aerosol optical depth at 670 nm;
 10210215;AOD865;JustAnumber;Total aerosol optical depth at 865 nm;
+10214052;AOT340;JustAnumber;Profile of optical thickness at 340 nm;
 10210127;TCCO-KGM2;kg m-2;Total column Carbon monoxide;
 10218045;TCC2H6-KGM2;kg m-2;Total column ethane;
 10210128;TCHCHO-KGM2;kg m-2;Total column Formaldehyde;
@@ -1387,3 +1389,5 @@
 10260541;FFMCODE;JustAnumber;Fine fuel moisture code;
 10260540;FWINX;JustAnumber;Forest fire weather index;
 10260544;INFSINX;JustAnumber;Initial fire spread index;
+# S5P
+10130213;CF-0TO1;JustAnumber;Cloud fraction (0 to 1);
