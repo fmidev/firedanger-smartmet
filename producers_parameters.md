@@ -33,3 +33,21 @@
 |TCSO2-KGM2 [kg/m²]|Total column Sulphur dioxide|TCSO2-MOLECCM2 [10^15 molecules/cm^2]|
 |UVBED|UV biologically effective dose||
 |UVBEDCS|UV biologically effective dose clear-sky||
+
+# ECB2SF
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+|EVAP-M [m]|Evaporation (m of water equivalent)||
+|FF-MS [m/s]|Wind speed in m/s||
+|RR-M [m]|Total precipitation in meters||
+|SD-M [m]|Snow depth in meters||
+|SND-KGM3 [kg/m³]|Snow density in kg/m3||
+|STL1-K [K]|Soil temperature level 1 in Kelvins||
+|SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 1||
+|SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 2||
+|TAS-K [K]|2 metre temperature in Kelvins||
+|TD-K [K]|Dew point temperature in Kelvins||
+|U10-MS [m/s]|10 metre U wind component||
+|V10-MS [m/s]|10 metre V wind component||
+|WESD-M|Snow depth (m of water equivalent)||
