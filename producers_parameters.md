@@ -66,6 +66,31 @@
 
 | Parameter | Parameter name | Available in other units |
 |:-|:-|:-|
+|EVAP-M [m]|Evaporation (m of water equivalent)|EVAP-MM [mm]|
+|EWSS-NM2S [N m⁻² s]|Eastward surface stress due to turbulent processes, accumulated||
+|FFG-MS [m/s]|Instantaneous wind speed in m/s||
+|FLLAT-JM2 [J/m²]|Latent heat flux||
+|FLSEN-JM2 [J/m²]|Sensible heat flux||
+|IC-0TO1|Ice cover, 1=ice, 0=no ice||
+|N-0TO1|Cloudiness 0...1||
+|NSSS-NM2S [N m⁻² s]|Northward surface stress due to turbulent processes, accumulated||
+|PSEA-PA [Pa]|Pressure reduced to mean sea level||
+|RADGLOA-JM2 [J/m²]|Global radiation accumulation||
+|RADLWA-JM2 [J/m²]|Long wave radiation accumulation||
+|RNETLWA-JM2 [J/m²]|Net long wave radiation accumulation||
+|RNETSWA-JM2 [J/m²]|Net short wave radiation accumulation||
+|RO-M [m]|Runoff in depth of water in metres||
+|RR-M [m]|Total precipitation in meters|RR-MM [mm]|
+|SD-M [m]|Snow depth in meters||
+|SND-KGM3 [kg/m³]|Snow density in kg/m3||
+|STL1-K [K]|Soil temperature level 1 in Kelvins|STL1-C [C]|
+|SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 1||
+|SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 2||
+|TAS-K [K]|2 metre temperature in Kelvins|TAS-C [C]|
+|TD-K [K]|Dew point temperature in Kelvins|TD-C [C]|
+|U10-MS [m/s]|10 metre U wind component||
+|V10-MS [m/s]|10 metre V wind component||
+|WESD-M|Snow depth (m of water equivalent)||
 
 # ERA5
 
