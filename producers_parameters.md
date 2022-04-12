@@ -38,16 +38,16 @@
 
 | Parameter | Parameter name | Available in other units |
 |:-|:-|:-|
-|EVAP-M [m]|Evaporation (m of water equivalent)||
+|EVAP-M [m]|Evaporation (m of water equivalent)|EVAP-MM [mm]|
 |FF-MS [m/s]|Wind speed in m/s||
-|RR-M [m]|Total precipitation in meters||
+|RR-M [m]|Total precipitation in meters|RR-MM [mm]|
 |SD-M [m]|Snow depth in meters||
 |SND-KGM3 [kg/m³]|Snow density in kg/m3||
-|STL1-K [K]|Soil temperature level 1 in Kelvins||
+|STL1-K [K]|Soil temperature level 1 in Kelvins|STL1-C [C]|
 |SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 1||
 |SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 2||
-|TAS-K [K]|2 metre temperature in Kelvins||
-|TD-K [K]|Dew point temperature in Kelvins||
+|TAS-K [K]|2 metre temperature in Kelvins|TAS-C [C]|
+|TD-K [K]|Dew point temperature in Kelvins|TD-C [C]|
 |U10-MS [m/s]|10 metre U wind component||
 |V10-MS [m/s]|10 metre V wind component||
 |WESD-M|Snow depth (m of water equivalent)||
