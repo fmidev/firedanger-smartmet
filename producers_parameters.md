@@ -21,15 +21,15 @@
 |TCC2H6-KGM2 [kg/m²]|Total column ethane|TCC2H6-MOLECCM2 [10^15 molecules/cm^2]|
 |TCC3H8-KGM2 [kg/m²]|Total column propane|TCC3H8-MOLECCM2 [10^15 molecules/cm^2]|
 |TCC5H8-KGM2 [kg/m²]|Total column isoprene|TCC5H8-MOLECCM2 [10^15 molecules/cm^2]|
-|TCCH4-KGM2 [kg/m²]|Total column methane||
-|TCCO-KGM2 [kg/m²]|Total column Carbon monoxide||
-|TCH2O2-KGM2 [kg/m²]|Total column hydrogen peroxide||
-|TCHCHO-KGM2 [kg/m²]|Total column Formaldehyde||
-|TCHNO3-KGM2 [kg/m²]|Total column nitric acid||
-|TCNO-KGM2 [kg/m²]|Total column nitrogen monoxide ||
-|TCNO2-KGM2 [kg/m²]|Total column Nitrogen dioxide||
-|TCOH-KGM2 [kg/m²]|Total column hydroxyl radical||
-|TCPAN-KGM2 [kg/m²]|Total column peroxyacetyl nitrate||
-|TCSO2-KGM2 [kg/m²]|Total column Sulphur dioxide||
+|TCCH4-KGM2 [kg/m²]|Total column methane|TCCH4-MOLECCM2 [10^15 molecules/cm^2]|
+|TCCO-KGM2 [kg/m²]|Total column Carbon monoxide|TCCO-MOLECCM2 [10^18 molecules/cm^2]|
+|TCH2O2-KGM2 [kg/m²]|Total column hydrogen peroxide|TCH2O2-MOLECCM2 [10^15 molecules/cm^2]|
+|TCHCHO-KGM2 [kg/m²]|Total column Formaldehyde|TCHCHO-MOLECCM2 [10^15 molecules/cm^2]|
+|TCHNO3-KGM2 [kg/m²]|Total column nitric acid|TCHNO3-MOLECCM2 [10^15 molecules/cm^2]|
+|TCNO-KGM2 [kg/m²]|Total column nitrogen monoxide |TCNO-MOLECCM2 [10^15 molecules/cm^2]|
+|TCNO2-KGM2 [kg/m²]|Total column Nitrogen dioxide|TCNO2-MOLECCM2 [10^15 molecules/cm^2]|
+|TCOH-KGM2 [kg/m²]|Total column hydroxyl radical|TCOH-MOLECCM2 [10^15 molecules/cm^2]|
+|TCPAN-KGM2 [kg/m²]|Total column peroxyacetyl nitrate|TCPAN-MOLECCM2 [10^15 molecules/cm^2]|
+|TCSO2-KGM2 [kg/m²]|Total column Sulphur dioxide|TCSO2-MOLECCM2 [10^15 molecules/cm^2]|
 |UVBED|UV biologically effective dose||
 |UVBEDCS|UV biologically effective dose clear-sky||
