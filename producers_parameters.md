@@ -34,7 +34,7 @@
 |UVBED|UV biologically effective dose||
 |UVBEDCS|UV biologically effective dose clear-sky||
 
-# ECB2SF
+# ECB2SF/ECBSF
 
 | Parameter | Parameter name | Available in other units |
 |:-|:-|:-|
@@ -51,3 +51,38 @@
 |U10-MS [m/s]|10 metre U wind component||
 |V10-MS [m/s]|10 metre V wind component||
 |WESD-M|Snow depth (m of water equivalent)||
+
+# ECFWI
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+
+# ECMARK5
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+
+# ECSF
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+
+# ERA5
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+
+# ERA5L
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+
+# S5P
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+
+# SWI 
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
