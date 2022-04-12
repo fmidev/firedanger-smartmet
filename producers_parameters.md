@@ -85,10 +85,10 @@
 |AOT340|Profile of optical thickness at 340 nm||
 |CF-0TO1|Cloud fraction (0 to 1)||
 |TCCO-KGM2 [kg/m²]|Total column Carbon monoxide|TCCO-MOLM2 [mol/m²], TCCO-MOLECCM2 [10^18 molecules/cm²]|
-|TCHCHO-KGM2 [kg/m²]||TCHCHO-MOLM2 [mol/m²], TCHCHO-MOLECCM2 [10^15 molecules/cm²]|
-|TCNO2-KGM2 [kg/m²]||TCNO2-MOLM2 [mol/m²], TCNO2-MOLECCM2 [10^15 molecules/cm²]|
-|TCSO2-KGM2 [kg/m²]||TCSO2-MOLM2 [mol/m²], TCSO2-MOLECCM2 [10^15 molecules/cm²]|
-|TOZONE-KGM2 [kg/m²]||TOZONE-MOLM2 [mol/m²], TOZONE-MOLECCM2 [10^15 molecules/cm²]|
+|TCHCHO-KGM2 [kg/m²]|Total column Formaldehyde|TCHCHO-MOLM2 [mol/m²], TCHCHO-MOLECCM2 [10^15 molecules/cm²]|
+|TCNO2-KGM2 [kg/m²]|Total column Nitrogen dioxide|TCNO2-MOLM2 [mol/m²], TCNO2-MOLECCM2 [10^15 molecules/cm²]|
+|TCSO2-KGM2 [kg/m²]|Total column Sulphur dioxide|TCSO2-MOLM2 [mol/m²], TCSO2-MOLECCM2 [10^15 molecules/cm²]|
+|TOZONE-KGM2 [kg/m²]|Total ozone in kg/m^2|TOZONE-MOLM2 [mol/m²], TOZONE-MOLECCM2 [10^15 molecules/cm²]|
 
 # SWI 
 
