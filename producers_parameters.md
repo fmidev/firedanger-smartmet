@@ -81,13 +81,21 @@
 |RNETSWA-JM2 [J/m²]|Net short wave radiation accumulation||
 |RO-M [m]|Runoff in depth of water in metres||
 |RR-M [m]|Total precipitation in meters|RR-MM [mm]|
+|RTOPLWA-JM2 [J/m²]|Net long wave radiation accumulation, top of atmosphere||
 |SD-M [m]|Snow depth in meters||
+|SNACC-KGM2 [kg/m²]|Snowfall accumulation in mm||
 |SND-KGM3 [kg/m³]|Snow density in kg/m3||
 |STL1-K [K]|Soil temperature level 1 in Kelvins|STL1-C [C]|
 |SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 1||
 |SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 2||
+|SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 3||
+|SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 4||
 |TAS-K [K]|2 metre temperature in Kelvins|TAS-C [C]|
 |TD-K [K]|Dew point temperature in Kelvins|TD-C [C]|
+|TMAX-24-K [K]|Maximum temperature in Kelvin on the preceding 24 hours period of the date-value|TMAX-24-C [C]|
+|TMIN-24-K [K]|Minimum temperature in Kelvin on the preceding 24 hours period of the date-value|TMIN-24-C [C]|
+|TSEA-K [K]|Sea temperature in Kelvins|TSEA-C [C]|
+|TSR-JM2 [J/m²]|||
 |U10-MS [m/s]|10 metre U wind component||
 |V10-MS [m/s]|10 metre V wind component||
 |WESD-M|Snow depth (m of water equivalent)||
