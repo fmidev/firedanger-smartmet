@@ -13,7 +13,19 @@
 #
 #################################################################################
 
-
+# satellite products
+#NDVI;301031;;
+MIR;301220;;
+SRB0;301200;;
+SRB1;301201;;
+SRB2;301202;;
+SRB3;301203;;
+SRB4;301204;;
+SRB5;301205;;
+SRB6;301206;;
+SRB7;301207;;
+SRB8;301208;;
+SRB9;301209;;
 
 # Mapping "standard" grib identifiers (defined in the "grib_parameters.csv" file) into 
 # our own FMI identifiers (defined in the "ext/fmi_parameters.csv" file).

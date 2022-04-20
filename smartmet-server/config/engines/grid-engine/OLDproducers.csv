@@ -1,0 +1,16 @@
+# Producer & geometryId search order. If no producer is given in
+# the query then the producers are used in the following order.
+#producer;geometry_id;grid_size (info)
+#Harmonie;999;
+
+# "Default"
+CAMS;6002;0.4deg x 0.4deg;
+ECBSF;6003;9.0km x 9.0km;
+ECB2SF;6001;27.8km x 27.8km;
+ECSF;6004;110km x 110km;
+ERA5L;6003;9.0km x 9.0km;
+ERA5;6001;27.8km x 27.8km;
+ECFWI;6001;27.8km x 27.8km;
+ECMARK5;6001;27.8km x 27.8km;
+S5P;6005;;
+S3SY;6006;;

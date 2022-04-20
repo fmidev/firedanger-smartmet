@@ -80,6 +80,7 @@
 1;6003;ERA5L-SAM;301;501;-80.000000;-10.000000;0.100000;0.100000;+x-y;ERA5L South-America grid
 1;6004;ECSF-SAM;31;51;-80.000000;-10.000000;1.000000;1.000000;+x-y;ECSF South-America
 1;6005;S5P-SAM;602;1503;-80.000000;-10.000000;0.050000;0.033000;+x-y;Sentinel-5P regular grid South-America
+1;6006;S3SY-SAM;6720;9071;-92.991071;24.991071;0.008929;0.008929;+x-y;Vegetation legacy grid
 #1;6001;name;121;161;-80.000000;-20.000000;0.250000;0.250000;+x-y;description 
 
 # ROTATED LATLON : projection,id,name,ni,nj,first_lon,first_lat,di,dj,scanning_mode,south_pole_lon,south_pole_lat,angle,earthSemiMajor,earthSemiMinor,description

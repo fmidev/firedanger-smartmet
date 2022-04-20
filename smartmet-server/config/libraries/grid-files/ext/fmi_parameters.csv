@@ -13,7 +13,18 @@
 # 7) DefaultPrecision
 #
 #################################################################################
-
+#10301031;NDVI;Normalized difference vegetation index;1;1;;;
+10301220;MIR;Medium infrared radiance;1;1;;;
+10301200;SRB0;Band 0 surface reflectance;1;1;;;
+10301201;SRB1;Band 0 surface reflectance;1;1;;;
+10301202;SRB2;Band 0 surface reflectance;1;1;;;
+10301203;SRB3;Band 0 surface reflectance;1;1;;;
+10301204;SRB4;Band 0 surface reflectance;1;1;;;
+10301205;SRB5;Band 0 surface reflectance;1;1;;;
+10301206;SRB6;Band 0 surface reflectance;1;1;;;
+10301207;SRB7;Band 0 surface reflectance;1;1;;;
+10301208;SRB8;Band 0 surface reflectance;1;1;;;
+10301209;SRB9;Band 0 surface reflectance;1;1;;;
 
 #################################################################################
 # Defining additional FMI parameters for GRIB parameters that do not yet have 

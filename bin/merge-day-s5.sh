@@ -39,5 +39,11 @@ do
 done
 echo $ins
 #cdo --eccodes -O -f grb1 -b P12 ensmean $ins ../grib/S5P_${1:0:4}0101T000000_${1}T000000_$2.grib
-cdo -s -O -f nc4c -z zip6 ensmean -setrtomiss,-1,-0.001 $ins ../nc/S5P_${1:0:4}0101T000000_${1}T000000_$2.nc
-cdo -s --eccodes -f grb1 -b P12 setparam,$p -selname,$v ../nc/S5P_${1:0:4}0101T000000_${1}T000000_$2.nc ../grib/S5P_${1:0:4}0101T000000_${1}T000000_$2.grib
+cdo -s -O -f nc4c -z zip_6 ensmean -setrtomiss,-1,-0.001 $ins ../nc/S5P_${1:0:4}0101T000000_${1}T000000_$2.nc
+if [[ "$2" == 'O3__PR' ]]
+then
+    cdo -s --eccodes -f grb1 -b P12 setparam,$p -selname,$v ../nc/S5P_${1:0:4}0101T000000_${1}T000000_$2.nc ../grib/S5P_${1:0:4}0101T000000_${1}T000000_$2.grib
+    
+else
+    cdo -s --eccodes -f grb1 -b P12 setparam,$p -selname,$v ../nc/S5P_${1:0:4}0101T000000_${1}T000000_$2.nc ../grib/S5P_${1:0:4}0101T000000_${1}T000000_$2.grib
+fi

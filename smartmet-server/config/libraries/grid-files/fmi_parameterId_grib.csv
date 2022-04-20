@@ -431,7 +431,7 @@ RNETSWA-JM2;176;;;
 RNETLWA-JM2;177;;;
 
 # 178:Top net solar radiation (J m-2)
-TSR-J;178;;;
+TSR-JM2;178;;;
 
 # 179:Top net thermal radiation (J m-2)
 RTOPLWA-JM2;179;;;
@@ -10833,6 +10833,8 @@ TKEN-JKG;500158;;;
 # 500218:deciduous forest (~)
 
 # 500219:normalized differential vegetation index (~)
+NDVI;500219;;;
+
 
 # 500220:normalized differential vegetation index (NDVI) (~)
 

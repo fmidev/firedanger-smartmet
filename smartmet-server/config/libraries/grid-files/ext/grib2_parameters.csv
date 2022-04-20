@@ -16,3 +16,18 @@
 #
 #################################################################################
 
+# 301 - Satellite products
+# MIR Medium Infrared reflectance
+301220;discipline=3,parameterCategory=0,parameterNumber=220;
+
+# Band 0 reflectance
+301200;discipline=3,parameterCategory=0,parameterNumber=200;
+
+# Band 2 reflectance
+301202;discipline=3,parameterCategory=0,parameterNumber=202;
+
+# Band 3 reflectance
+301203;discipline=3,parameterCategory=0,parameterNumber=203;
+
+# NDVI normalized difference vegetation index
+#301031;discipline=2,parameterCategory=0,parameterNumber=31;

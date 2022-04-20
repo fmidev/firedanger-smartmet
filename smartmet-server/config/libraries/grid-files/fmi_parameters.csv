@@ -1330,7 +1330,7 @@
 10000042;SWVL4-M3M3;M3M3;Volumetric soil water layer 4;1;1;1;5;
 10000139;STL1-K;K;Soil temperature level 1 in Kelvins;1;1;1;1;
 10000141;WESD-M;m;Snow depth (m of water equivalent);1;1;1;2;
-10000178;TSR-J;J;Top Net Solar Radation;1;1;1;2;
+10000178;TSR-JM2;J;Top Net Solar Radation;1;1;1;2;
 10000182;EVAP-M;m;Evaporation (m of water equivalent);1;1;1;1;
 10000183;STL3-K;K;Soil temperature level 3 in Kelvins;1;1;1;1;
 10000205;RO-M;M;Runoff in depth of water in metres;1;1;1;5;
@@ -1391,3 +1391,5 @@
 10260544;INFSINX;JustAnumber;Initial fire spread index;
 # S5P
 10130213;CF-0TO1;JustAnumber;Cloud fraction (0 to 1);
+#S3SY
+10500219;NDVI;JustAnumber;Normalized difference vegetation index;

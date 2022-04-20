@@ -15,5 +15,6 @@ ECBSF;ECBSF;EC-C3S-BSF;Bias adjusted C3S seasonal forecast data
 ECB2SF;ECB2SF;EC-C3S-B2SF;2nd method Bias adjusted C3S seasonal forecast data
 SWI;SWI;SWI;Copernicus land Soil wetness index
 S5P;S5P;S5P;Sentinel-5Precursor level 2
+S3SY;S3SY;S3SY;Sentinel-3 level 2 Synergy 
 ECMARK5;ECMARK5;ECMARK5;EFFIS Australian fire weather indices
 ECFWI;ECFWI;ECFWI;EFFIS Canadian fire weather indices

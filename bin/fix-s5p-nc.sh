@@ -44,4 +44,5 @@ ncatted -a bounds,longitude,o,c,'longitude_bounds' -a bounds,latitude,o,c,'latit
  -a coordinates,tm5_tropopause_layer_index,o,c,'longitude latitude' \
  -a coordinates,surface_pressure,o,c,'longitude latitude' ${1:0:-3}-cl.nc
 [[ "${1:13:6}" == 'O3__PR' ]] && ncatted  -a coordinates,${v}_precision,o,c,'longitude latitude' ${1:0:-3}-cl.nc
+
 ncrename -O -v $v,$s ${1:0:-3}-cl.nc
