@@ -1,12 +1,17 @@
+#!/usr/bin/env python3 
 import cdsapi
 import sys 
+import yaml
+
+with open('/home/users/smartmet/.camsapirc', 'r') as f:
+        credentials = yaml.safe_load(f)
+
+c = cdsapi.Client(url=credentials['url'], key=credentials['key'])
 
 year= sys.argv[1]
 mon= sys.argv[2]
 day= sys.argv[3]
 date='%s-%s-%s'%(year,mon,day)
-
-c = cdsapi.Client()
 
 c.retrieve(
     'cams-global-atmospheric-composition-forecasts',
@@ -26,7 +31,7 @@ c.retrieve(
         'pressure_level': [
             '925', '950', '1000',
         ],
-        'date': '%s-%s-%s/%s-%s-%s'%(year,mon,day,year,mon,day),
+        'date': date+'/'+date,
         'time': [
             '00:00', '12:00',
         ],
@@ -48,4 +53,4 @@ c.retrieve(
         ],
         'format': 'grib',
     },
-    '/data/cams-fc-%s%s%s-sam.grib'%(year,mon,day))
+    '/data/cams-ml-fc-%s%s%s-sam.grib'%(year,mon,day))

@@ -44,4 +44,4 @@ parallel grib_set -r -s centre=97,dataDate=$d ../grib/S3SY_${d:0:4}0101T000000_$
  ../grib/S3SY_${d:0:4}0101T000000_${d}T000000_97_{}.grib ::: B0 B2 B3 MIR NDVI && rm  ../grib/S3SY_${d:0:4}0101T000000_${d}T000000_[BMN]*.grib
 #parallel fix-s5p-nc.sh ::: S5P_NRTI_L2__*_$d*/S*[0-9].nc && \
 #  parallel merge-day-s5.sh $d :::: s5p-vars.lst
-sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0
+#sudo docker exec smartmet-server /bin/fmi/filesys2smartmet /home/smartmet/config/libraries/tools-grid/filesys-to-smartmet.cfg 0

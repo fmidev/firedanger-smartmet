@@ -90,7 +90,7 @@ services:
     # From image...
     image: redis:latest
     # Create a container named...
-    container_name: redis-content-server
+    container_name: redis-db
     restart: always
     networks:
       customnetwork:
