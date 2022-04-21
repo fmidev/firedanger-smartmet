@@ -38,13 +38,13 @@ Available WMS 'LAYERS' can be checked with the GetCapabilities request as follow
 
 `https://smart.nsdc.fmi.fi/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
 
-An example Dali request to the server (ECBSF ground temperature in Kelvins): 
+An example Dali request to the server (ECBSF dew point temperature in Kelvins): 
 
-`https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000`
+`https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TD-K&producer=ECBSF&origintime=20220401T000000&geometryId=6003&levelId=1&level=0&forecastType=1&forecastNumber=0&type=png&time=20220402T000000`
 
 A response for the previous example query is shown below. The dali product urls can be copied from the grid-gui page by changing a parameters Presentation menu to Dali and copying the image urls. The time setting can be used to make an animation that loads consequitive time steps.
 
-![WMS layer](https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TG-K&producer=ECBSF&origintime=20210801T000000&geometryId=6003&levelId=9&level=7&forecastType=1&forecastNumber=0&type=png&time=20210802T000000)
+![WMS layer](https://smart.nsdc.fmi.fi/dali?customer=gui&product=temperature_1&source=grid&size=1&l1.parameter=TD-K&producer=ECBSF&origintime=20220401T000000&geometryId=6003&levelId=1&level=0&forecastType=1&forecastNumber=0&type=png&time=20220402T000000)
 
 For more information about the WMS plugin, see for example [SmartMet plugin WMS (Dali & WMS) Wiki pages](https://github.com/fmidev/smartmet-plugin-wms/wiki/SmartMet-plugin-WMS-(Dali-&-WMS)) or [the Web Map Server specification](https://www.ogc.org/standards/wms). (The Dali plugin enables more advanced requests than the WMS plugin.) 
 
