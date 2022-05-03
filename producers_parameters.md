@@ -152,29 +152,29 @@
 |CVH-N [0 to 1]|High vegetation cover||
 |CVL-N [O to 1]|Low vegetation cover||
 |EVAP-M [m]|Evaporation (m of water equivalent)||
-|EVAPP-M [m]|Potential evaporation||
+|EVAPP-M [m]|Potential evaporation|EVAP-MM [mm]|
 |LAI_HV-M2M2 [m²/m²]|Leaf area index high vegetation||
 |LAI_LV-M2M2 [m²/m²]|Leaf area index low vegetation||
-|PSEA-PA [Pa]|Pressure reduced to mean sea level||
+|PSEA-PA [Pa]|Pressure reduced to mean sea level|PSEA-HPA [hPa]|
 |RO-M [m]|Runoff in depth of water in meters||
-|RR-M [m]|Total precipitation in meters||
+|RR-M [m]|Total precipitation in meters|RR-MM [mm]|
 |SD-M [m]|Snow depth in meters||
 |SNACC-KGM2 [kg/m²]|Snowfall accumulation in mm||
 |SND-KGM3 [kg/m³]|Snow density in kg/m3||
 |SOILTY-N|Soil type||
 |SRO-M [m]|Surface runoff (metres)||
 |SSRO-M [m]|Subsurface runoff (metres)||
-|STL1-K [K]|Soil temperature level 1 in Kelvins||
-|STL2-K [K]|Soil temperature level 2 in Kelvins||
-|STL3-K [K]|Soil temperature level 3 in Kelvins||
-|STL4-K [K]|Soil temperature level 4 in Kelvins||
+|STL1-K [K]|Soil temperature level 1 in Kelvins|STL1-C [C]|
+|STL2-K [K]|Soil temperature level 2 in Kelvins|STL2-C [C]|
+|STL3-K [K]|Soil temperature level 3 in Kelvins|STL3-C [C]|
+|STL4-K [K]|Soil temperature level 4 in Kelvins|STL4-C [C]|
 |SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 1||
 |SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 2||
 |SWVL3-M3M3 [m³/m³]|Volumetric soil water layer 3||
 |SWVL4-M3M3 [m³/m³]|Volumetric soil water layer 4||
-|TAS-K [K]|2 metre temperature in Kelvins||
+|TAS-K [K]|2 metre temperature in Kelvins|TAS-C [C]|
 |TCSW-KGM2 [kg/m²]|Total column snow water (kg m-2)||
-|TD-K [K]|Dew point temperature in K||
+|TD-K [K]|Dew point temperature in K|TD-C [C]|
 |TVH-N|Type of high vegetation||
 |TVL-N|Type of low vegetation||
 |U10-MS [m/s]|10 metre U wind component||
