@@ -201,13 +201,13 @@
 
 # S3SY 
 
-| Parameter | Parameter name | Available in other units |
-|:-|:-|:-|
-|MIR|Medium infrared reflectance||
-|NDVI|Normalized difference vegetation index||
-|SRB0|Band 0 reflectance||
-|SRB2|Band 2 reflectance||
-|SRB3|Band 3 reflectance||
+| Parameter | Parameter name |
+|:-|:-|
+|MIR|Medium infrared reflectance|
+|NDVI|Normalized difference vegetation index|
+|SRB0|Band 0 reflectance|
+|SRB2|Band 2 reflectance|
+|SRB3|Band 3 reflectance|
 
 # SWI 
 
