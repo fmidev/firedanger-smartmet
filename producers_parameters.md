@@ -140,6 +140,37 @@
 
 | Parameter | Parameter name | Available in other units |
 |:-|:-|:-|
+|CVH-N [0 to 1]|High vegetation cover||
+|CVL-N [O to 1]|Low vegetation cover||
+|EVAP-M [m]|Evaporation (m of water equivalent)||
+|EVAPP-M [m]|Potential evaporation||
+|LAI_HV-M2M2 [m²/m²]|Leaf area index high vegetation||
+|LAI_LV-M2M2 [m²/m²]|Leaf area index low vegetation||
+|PSEA-PA [Pa]|Pressure reduced to mean sea level||
+|RO-M [m]|Runoff in depth of water in meters||
+|RR-M [m]|Total precipitation in meters||
+|SD-M [m]|Snow depth in meters||
+|SNACC-KGM2 [kg/m²]|Snowfall accumulation in mm||
+|SND-KGM3 [kg/m³]|Snow density in kg/m3||
+|SOILTY-N|Soil type||
+|SRO-M [m]|Surface runoff (metres)||
+|SSRO-M [m]|Subsurface runoff (metres)||
+|STL1-K [K]|Soil temperature level 1 in Kelvins||
+|STL2-K [K]|Soil temperature level 2 in Kelvins||
+|STL3-K [K]|Soil temperature level 3 in Kelvins||
+|STL4-K [K]|Soil temperature level 4 in Kelvins||
+|SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 1||
+|SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 2||
+|SWVL3-M3M3 [m³/m³]|Volumetric soil water layer 3||
+|SWVL4-M3M3 [m³/m³]|Volumetric soil water layer 4||
+|TAS-K [K]|2 metre temperature in Kelvins||
+|TCSW-KGM2 [kg/m²]|Total column snow water (kg m-2)||
+|TD-K [K]|Dew point temperature in K||
+|TVH-N|Type of high vegetation||
+|TVL-N|Type of low vegetation||
+|U10-MS [m/s]|10 metre U wind component||
+|V10-MS [m/s]|10 metre V wind component||
+|WESD-M [m]|Snow depth (m of water equivalent)||
 
 # ERA5L
 
@@ -158,6 +189,16 @@
 |TCNO2-KGM2 [kg/m²]|Total column Nitrogen dioxide|TCNO2-MOLM2 [mol/m²], TCNO2-MOLECCM2 [10^15 molecules/cm²]|
 |TCSO2-KGM2 [kg/m²]|Total column Sulphur dioxide|TCSO2-MOLM2 [mol/m²], TCSO2-MOLECCM2 [10^15 molecules/cm²]|
 |TOZONE-KGM2 [kg/m²]|Total ozone in kg/m^2|TOZONE-MOLM2 [mol/m²], TOZONE-MOLECCM2 [10^15 molecules/cm²]|
+
+# S3SY 
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+|MIR|Medium infrared reflectance||
+|NDVI|Normalized difference vegetation index||
+|SRB0|Band 0 reflectance||
+|SRB2|Band 2 reflectance||
+|SRB3|Band 3 reflectance||
 
 # SWI 
 
