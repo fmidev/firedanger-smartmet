@@ -1,6 +1,6 @@
 # CAMS
 
-## single level
+### single level
 
 | Parameter | Parameter name | Available in other units | 
 |:-|:-|:-|
@@ -36,7 +36,39 @@
 |UVBED|UV biologically effective dose||
 |UVBEDCS|UV biologically effective dose clear-sky||
 
-## pressure levels 1000, 950, 925 hPa
+### pressure levels 1000, 950, 925 hPa
+
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+|AERMR01-KGKG [kg/kg]|Sea salt aerosol (0.03-0.5 um) mixing ratio||
+|AERMR02-KGKG [kg/kg]|Sea salt aerosol (0.5-5 um) mixing ratio||
+|AERMR03-KGKG [kg/kg]|Sea salt aerosol (5-20 um) mixing ratio||
+|AERMR04-KGKG [kg/kg]|Dust aerosol (0.03-0.55 um) mixing ratio||
+|AERMR05-KGKG [kg/kg]|Dust aerosol (0.55-0.9 um) mixing ratio||
+|AERMR06-KGKG [kg/kg]|Dust aerosol (0.9-20 um) mixing ratio||
+|AERMR07-KGKG [kg/kg]|Hydrophilic organic matter aerosol mixing ratio||
+|AERMR08-KGKG [kg/kg]|Hydrophobic organic matter aerosol mixing ratio||
+|AERMR09-KGKG [kg/kg]|Hydrophilic black carbon aerosol mixing ratio||
+|AERMR10-KGKG [kg/kg]|Hydrophobic black carbon aerosol mixing ratio||
+|AERMR11-KGKG [kg/kg]|Sulphate aerosol mixing ratio||
+|AERMR16-KGKG [kg/kg]|Nitrate fine mode aerosol mass mixing ratio||
+|AERMR17-KGKG [kg/kg]|Nitrate coarse mode aerosol mass mixing ratio||
+|AERMR18-KGKG [kg/kg]|Ammonium aerosol mass mixing ratio||
+|CO-KGKG [kg/kg]|Carbon monoxide mass mixing ratio||
+|C2H6-KGKG [kg/kg]Ethane|||
+|HCHO-KGKG [kg/kg]|Formaldehyde||
+|H2O2-KGKG [kg/kg]|Hydrogen peroxide||
+|OH-KGKG [kg/kg]|Hydroxyl radical||
+|C5H8-KGKG [kg/kg]|Isoprene||
+|CH4_C-KGKG [kg/kg]|Methane (chemistry)||
+|HNO3-KGKG [kg/kg]|Nitric acid||
+|NO2-KGKG [kg/kg]|Nitrogen dioxide mass mixing ratio||
+|NO-KGKG [kg/kg]|Nitrogen monoxide mass mixing ratio||
+|GO3-KGKG [kg/kg]|Ozone mass mixing ratio (full chemistry)||
+|PAN-KGKG [kg/kg]|Peroxyacetyl nitrate||
+|C3H8-KGKG [kg/kg]|Propane||
+|SO2-KGKG [kg/kg]|Sulphur dioxide mass mixing ratio||
 
 # ECB2SF/ECBSF
 
