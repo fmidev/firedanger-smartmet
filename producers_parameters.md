@@ -90,13 +90,22 @@
 
 # ECFWI
 
-| Parameter | Parameter name | Available in other units |
-|:-|:-|:-|
+| Parameter | Parameter name |
+|:-|:-|
+|DRTCODE|Drought code|
+|DUFMCODE||Duff moisture code|
+|FBUPINX|Fire buildup index|
+|FDSRTE|Fire daily severity rating|
+|FFMCODE|Fine fuel moisture code|
+|FWINX|Forest fire weather index|
+|INFSINX|Initial fire spread index|
 
 # ECMARK5
 
-| Parameter | Parameter name | Available in other units |
-|:-|:-|:-|
+| Parameter | Parameter name | 
+|:-|:-|
+|FDIMRK|Fire danger index (as defined by the Australian forest service)|
+|KBDI|Keetch-Byram drought index|
 
 # ECSF
 
