@@ -1,5 +1,7 @@
 # CAMS
 
+### single level
+
 | Parameter | Parameter name | Available in other units | 
 |:-|:-|:-|
 |AMAOD550|Ammonium aerosol optical depth at 550nm||
@@ -34,6 +36,40 @@
 |UVBED|UV biologically effective dose||
 |UVBEDCS|UV biologically effective dose clear-sky||
 
+### pressure levels 1000, 950, 925 hPa
+
+
+| Parameter | Parameter name | Available in other units |
+|:-|:-|:-|
+|AERMR01-KGKG [kg/kg]|Sea salt aerosol (0.03-0.5 um) mixing ratio||
+|AERMR02-KGKG [kg/kg]|Sea salt aerosol (0.5-5 um) mixing ratio||
+|AERMR03-KGKG [kg/kg]|Sea salt aerosol (5-20 um) mixing ratio||
+|AERMR04-KGKG [kg/kg]|Dust aerosol (0.03-0.55 um) mixing ratio||
+|AERMR05-KGKG [kg/kg]|Dust aerosol (0.55-0.9 um) mixing ratio||
+|AERMR06-KGKG [kg/kg]|Dust aerosol (0.9-20 um) mixing ratio||
+|AERMR07-KGKG [kg/kg]|Hydrophilic organic matter aerosol mixing ratio||
+|AERMR08-KGKG [kg/kg]|Hydrophobic organic matter aerosol mixing ratio||
+|AERMR09-KGKG [kg/kg]|Hydrophilic black carbon aerosol mixing ratio||
+|AERMR10-KGKG [kg/kg]|Hydrophobic black carbon aerosol mixing ratio||
+|AERMR11-KGKG [kg/kg]|Sulphate aerosol mixing ratio||
+|AERMR16-KGKG [kg/kg]|Nitrate fine mode aerosol mass mixing ratio||
+|AERMR17-KGKG [kg/kg]|Nitrate coarse mode aerosol mass mixing ratio||
+|AERMR18-KGKG [kg/kg]|Ammonium aerosol mass mixing ratio||
+|CO-KGKG [kg/kg]|Carbon monoxide mass mixing ratio||
+|C2H6-KGKG [kg/kg]Ethane|||
+|HCHO-KGKG [kg/kg]|Formaldehyde||
+|H2O2-KGKG [kg/kg]|Hydrogen peroxide||
+|OH-KGKG [kg/kg]|Hydroxyl radical||
+|C5H8-KGKG [kg/kg]|Isoprene||
+|CH4_C-KGKG [kg/kg]|Methane (chemistry)||
+|HNO3-KGKG [kg/kg]|Nitric acid||
+|NO2-KGKG [kg/kg]|Nitrogen dioxide mass mixing ratio||
+|NO-KGKG [kg/kg]|Nitrogen monoxide mass mixing ratio||
+|GO3-KGKG [kg/kg]|Ozone mass mixing ratio (full chemistry)||
+|PAN-KGKG [kg/kg]|Peroxyacetyl nitrate||
+|C3H8-KGKG [kg/kg]|Propane||
+|SO2-KGKG [kg/kg]|Sulphur dioxide mass mixing ratio||
+
 # ECB2SF/ECBSF
 
 | Parameter | Parameter name | Available in other units |
@@ -54,13 +90,22 @@
 
 # ECFWI
 
-| Parameter | Parameter name | Available in other units |
-|:-|:-|:-|
+| Parameter | Parameter name |
+|:-|:-|
+|DRTCODE|Drought code|
+|DUFMCODE||Duff moisture code|
+|FBUPINX|Fire buildup index|
+|FDSRTE|Fire daily severity rating|
+|FFMCODE|Fine fuel moisture code|
+|FWINX|Forest fire weather index|
+|INFSINX|Initial fire spread index|
 
 # ECMARK5
 
-| Parameter | Parameter name | Available in other units |
-|:-|:-|:-|
+| Parameter | Parameter name | 
+|:-|:-|
+|FDIMRK|Fire danger index (as defined by the Australian forest service)|
+|KBDI|Keetch-Byram drought index|
 
 # ECSF
 
@@ -104,6 +149,37 @@
 
 | Parameter | Parameter name | Available in other units |
 |:-|:-|:-|
+|CVH-N [0 to 1]|High vegetation cover||
+|CVL-N [O to 1]|Low vegetation cover||
+|EVAP-M [m]|Evaporation (m of water equivalent)||
+|EVAPP-M [m]|Potential evaporation|EVAP-MM [mm]|
+|LAI_HV-M2M2 [m²/m²]|Leaf area index high vegetation||
+|LAI_LV-M2M2 [m²/m²]|Leaf area index low vegetation||
+|PSEA-PA [Pa]|Pressure reduced to mean sea level|PSEA-HPA [hPa]|
+|RO-M [m]|Runoff in depth of water in meters||
+|RR-M [m]|Total precipitation in meters|RR-MM [mm]|
+|SD-M [m]|Snow depth in meters||
+|SNACC-KGM2 [kg/m²]|Snowfall accumulation in mm||
+|SND-KGM3 [kg/m³]|Snow density in kg/m3||
+|SOILTY-N|Soil type||
+|SRO-M [m]|Surface runoff (metres)||
+|SSRO-M [m]|Subsurface runoff (metres)||
+|STL1-K [K]|Soil temperature level 1 in Kelvins|STL1-C [C]|
+|STL2-K [K]|Soil temperature level 2 in Kelvins|STL2-C [C]|
+|STL3-K [K]|Soil temperature level 3 in Kelvins|STL3-C [C]|
+|STL4-K [K]|Soil temperature level 4 in Kelvins|STL4-C [C]|
+|SWVL1-M3M3 [m³/m³]|Volumetric soil water layer 1||
+|SWVL2-M3M3 [m³/m³]|Volumetric soil water layer 2||
+|SWVL3-M3M3 [m³/m³]|Volumetric soil water layer 3||
+|SWVL4-M3M3 [m³/m³]|Volumetric soil water layer 4||
+|TAS-K [K]|2 metre temperature in Kelvins|TAS-C [C]|
+|TCSW-KGM2 [kg/m²]|Total column snow water (kg m-2)||
+|TD-K [K]|Dew point temperature in K|TD-C [C]|
+|TVH-N|Type of high vegetation||
+|TVL-N|Type of low vegetation||
+|U10-MS [m/s]|10 metre U wind component||
+|V10-MS [m/s]|10 metre V wind component||
+|WESD-M [m]|Snow depth (m of water equivalent)||
 
 # ERA5L
 
@@ -122,6 +198,16 @@
 |TCNO2-KGM2 [kg/m²]|Total column Nitrogen dioxide|TCNO2-MOLM2 [mol/m²], TCNO2-MOLECCM2 [10^15 molecules/cm²]|
 |TCSO2-KGM2 [kg/m²]|Total column Sulphur dioxide|TCSO2-MOLM2 [mol/m²], TCSO2-MOLECCM2 [10^15 molecules/cm²]|
 |TOZONE-KGM2 [kg/m²]|Total ozone in kg/m^2|TOZONE-MOLM2 [mol/m²], TOZONE-MOLECCM2 [10^15 molecules/cm²]|
+
+# S3SY 
+
+| Parameter | Parameter name |
+|:-|:-|
+|MIR|Medium infrared reflectance|
+|NDVI|Normalized difference vegetation index|
+|SRB0|Band 0 reflectance|
+|SRB2|Band 2 reflectance|
+|SRB3|Band 3 reflectance|
 
 # SWI 
 
