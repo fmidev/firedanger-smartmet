@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # monthly script for fetching seasonal data from cdsapi, doing bias corrections and
 # and setting up data in the smartmet-server, bias adjustment can be done based on ERA5 Land (default) or ERA5
@@ -21,6 +21,16 @@ else
     year=$(date +%Y)
     month=$(date +%m)
     bsf='BSF'; era='era5l';
+    
+    ## remove previous month files
+    oldmonth=$(date -d '1 month ago' +%m)
+    oldyear=$(date -d '1 month ago' +%Y)
+    rm ens/ec-${bsf}_$oldyear${oldmonth}_*-24h-sam-*.grib
+    rm ens/ec-*_$oldyear${oldmonth}_pl-12h-sam-*.grib
+    rm ens/ec-*_$oldyear${oldmonth}_pl-pp-12h-sam-*.grib
+    rm ens/ec-sf-${era}_$oldyear${oldmonth}_disacc-euro-*.grib
+    rm ens/ec-sf_$oldyear${oldmonth}_all+sde-24h-sam-*
+    rm ens/ECSF_$oldyear${oldmonth}01T000000_all-24h-sam-*
 fi
 cd /home/users/smartmet/data
 
@@ -103,21 +113,42 @@ conda activate xr
  grib_copy ens/ec-${bsf}_$year${month}_stl-24h-sam-*-fixed.grib grib/EC${bsf}_$year${month}01T000000_stl-24h-sam.grib &
 wait
 rm ens/ec-${bsf}_$year${month}_*-24h-sam-*.grib
+
 # add snow depth to ECSF
-[ -f ec-sf-$year$month-all-24h-sam.grib ] && [ ! -f grib/ECSF_$year${month}01T000000_all-24h-sam.grib ] &&\
- cdo -s --eccodes -O aexprf,ec-sde.instr ec-sf-$year$month-all-24h-sam.grib grib/ECSF_$year${month}01T000000_all-24h-sam.grib ||\
+[ -f ens/ec-sf_$year${month}_all-24h-sam-50.grib ] && [ ! -f ens/ec-sf_$year${month}_all+sde-24h-sam-50.grib ] &&\
+ seq 0 50 | parallel cdo -s --eccodes -O aexprf,ec-sde.instr ens/ec-sf_$year${month}_all-24h-sam-{}.grib ens/ec-sf_$year${month}_all+sde-24h-sam-{}.grib ||\
  echo "NOT adding ECSF snow - no input or already produced"
+# fix grib attributes for ECSF
+[ -f ens/ec-sf_$year${month}_all+sde-24h-sam-50.grib ] && [ ! -f ens/ECSF_$year${month}01T000000_all-24h-sam-50.grib ] && \
+ seq 0 50 | parallel grib_set -r -s centre=98,setLocalDefinition=1,localDefinitionNumber=15,totalNumber=51,number={} ens/ec-sf_$year${month}_all+sde-24h-sam-{}.grib \
+    ens/ECSF_$year${month}01T000000_all-24h-sam-{}.grib || echo "NOT fixing sde gribs attributes - no input or already produced"
+# join ensemble members and move to grib folder 
+[ -f ens/ECSF_$year${month}01T000000_all-24h-sam-50.grib ] && [ ! -f grib/ECSF_$year${month}01T000000_all-24h-sam.grib ] &&\
+grib_copy ens/ECSF_$year${month}01T000000_all-24h-sam-*.grib grib/ECSF_$year${month}01T000000_all-24h-sam.grib || echo "NOT joining ensemble members with sde - no input or already produced"
 
 ## Post-process pressure level data
-# calculate variables vapour pressures, dew point temps, k-index and add them to the data set
-[ -f ec-sf-$year$month-pl-12h-sam.grib ] && [ ! -f grib/ECSF_$year${month}01T000000_pl-pp-12h-sam.grib ] && \
- cdo --eccodes -O -b P12 \
-	aexpr,'kx=sellevel(t,85000)-sellevel(t,50000)+sellevel(dpt,85000)-(sellevel(t,70000)-sellevel(dpt,70000));' \
-	-aexpr,'dpt=log(vp/6.112)*243.5/(17.67-log(vp/6.112));' -aexpr,'ws=sqrt(u^2+v^2);' \
+
+## Split pl to ensemble members 
+[ -f ens/ec-sf_$year${month}_pl-12h-sam-50.grib ] && echo "Ensemble member pl files ready" || grib_copy ec-sf-$year${month}-pl-12h-sam.grib ens/ec-sf_$year${month}_pl-12h-sam-[number].grib
+
+## Calculate variables vapour pressures, dew point temps, k-index and add them to the data set
+[ -f ens/ec-sf_$year${month}_pl-12h-sam-50.grib ] && ! [ -f ens/ec-sf_$year${month}_pl-pp-12h-sam-50.grib ] && \
+seq 0 50 | parallel -q cdo --eccodes -O -b P12 \
+        aexpr,'kx=sellevel(t,85000)-sellevel(t,50000)+sellevel(dpt,85000)-(sellevel(t,70000)-sellevel(dpt,70000));' \
+        -aexpr,'dpt=log(vp/6.112)*243.5/(17.67-log(vp/6.112));' -aexpr,'ws=sqrt(u^2+v^2);' \
     -aexpr,'wdir=180+180/3.14159265*2*atan(v/(sqr(u^2+v^2)+u));' \
-	-aexpr,'vp=clev(q)*q/(0.622+0.378*q);' ec-sf-$year$month-pl-12h-sam.grib \
-	grib/ECSF_$year${month}01T000000_pl-pp-12h-sam.grib ||\
- echo "NOT adding ECSF pressure level - no input or already produced"
+        -aexpr,'vp=clev(q)*q/(0.622+0.378*q);' ens/ec-sf_$year${month}_pl-12h-sam-{}.grib ens/ec-sf_$year${month}_pl-pp-12h-sam-{}.grib || \
+ echo "NOT adding kx to ECSF pressure level - no input or already produced"
+
+## fix grib attributes
+[ -f ens/ec-sf_$year${month}_pl-pp-12h-sam-50.grib ] && ! [ -f ens/ec-sf_$year${month}_pl-pp-12h-sam-50-fixed.grib ] && \
+seq 0 50 | parallel grib_set -r -s centre=98,setLocalDefinition=1,localDefinitionNumber=15,totalNumber=51,number={} ens/ec-sf_$year${month}_pl-pp-12h-sam-{}.grib \
+ens/ec-sf_$year${month}_pl-pp-12h-sam-{}-fixed.grib || echo "NOT fixing pl-pp grib attributes - no input or already produced"
+
+## join pl-pp ensemble members and move to grib folder
+[ -f ens/ec-sf_$year${month}_pl-pp-12h-sam-50-fixed.grib ] && ! [ -f grib/ECSF_$year${month}01T000000_pl-pp-12h-sam.grib ] && \
+grib_copy ens/ec-sf_$year${month}_pl-pp-12h-sam-*-fixed.grib grib/ECSF_$year${month}01T000000_pl-pp-12h-sam.grib || echo "NOT joining pl-pp ensemble members - no input or already produced"
+wait 
 
 # produce forcing file for HOPS
 # mod. M.Kosmale 18.03.2021: called now independently from cron (v3)

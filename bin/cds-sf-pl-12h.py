@@ -1,4 +1,4 @@
-!/usr/bin/env python3
+#!/usr/bin/env python3
 import cdsapi
 import sys
 # To retrieve 'seasonal forecast subdaily data on pressure levels'

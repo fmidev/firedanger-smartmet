@@ -12,9 +12,9 @@ then
     month=$2
     day=$3
 else
-    year=$(date -d '5 days ago' +%Y)
-    month=$(date -d '5 days ago' +%m)
-    day=$(date -d '5 days ago' +%d)
+    year=$(date -d '6 days ago' +%Y)
+    month=$(date -d '6 days ago' +%m)
+    day=$(date -d '6 days ago' +%d)
 fi
 cd /data
 echo "fetch ERA5 for y: $year m: $month d: $day"

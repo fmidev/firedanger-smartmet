@@ -13,7 +13,6 @@
 # 7) DefaultPrecision
 #
 #################################################################################
-#10301031;NDVI;Normalized difference vegetation index;1;1;;;
 10301220;MIR;Medium infrared radiance;1;1;;;
 10301200;SRB0;Band 0 surface reflectance;1;1;;;
 10301201;SRB1;Band 0 surface reflectance;1;1;;;
@@ -40,4 +39,11 @@
 
 #################################################################################
 
-
+10000032;ASN-0TO1;0to1;Snow albedo (0-1);
+10000044;ES-M;m;Snow evaporation (m of water equivalent);
+10000045;SMLT-M;m;Snowmelt (m of water equivalent);
+10228100;EVATC-M;m;Evaporation from the top of canopy (m of water equivalent);
+10228101;EVABS-M;m;Evaporation from bare soil (m of water equivalent);
+10228102;EVAOW-M;m;Evaporation from open water surfaces excluding oceans (m of water equivalent);
+10228103;EVAVT-M;m;Evaporation from vegetation transpiration (m of water equivalent);
+10260038;SNOW-PERC;260038;%;Snow cover (%);

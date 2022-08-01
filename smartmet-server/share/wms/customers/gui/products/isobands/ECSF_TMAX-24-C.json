@@ -10,7 +10,7 @@
 	    "layer_type": "isoband",
 	    "isobands": "json:isobands/temperature_C.json",
 	    "css": "isobands/temperature.css",
-	    "parameter": "TMAX-24-C:ECSF::1:0:1",
+	    "parameter": "TMAX-24-C:ECSF::1:0:1:0",
 		"sampling":{
 		"relativeresolution": 4
 	    },

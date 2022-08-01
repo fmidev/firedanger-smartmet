@@ -8,7 +8,7 @@
 	"layers": [{
 	    "qid": "l", 
 	    "layer_type": "isoband",
-	    "isobands": "json:isobands/evaporation.json",
+	    "isobands": "json:isobands/evaporation_mm.json",
 	    "css": "isobands/evaporation.css",
 	    "parameter": "EVAP-MM:ECSF::1:0:1",
 		"sampling":{

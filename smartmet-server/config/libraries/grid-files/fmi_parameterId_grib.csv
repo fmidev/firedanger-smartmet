@@ -3877,26 +3877,37 @@ RRR-MEAN-MS;172228;;;
 # 201255:Indicates a missing value (~)
 
 # 210001:Sea Salt Aerosol (0.03 - 0.5 um) Mixing Ratio (kg kg-1)
+AERMR01-KGKG;210001;;;
 
 # 210002:Sea Salt Aerosol (0.5 - 5 um) Mixing Ratio (kg kg-1)
+AERMR02-KGKG;210002;;;
 
 # 210003:Sea Salt Aerosol (5 - 20 um) Mixing Ratio (kg kg-1)
+AERMR03-KGKG;210003;;;
 
 # 210004:Dust Aerosol (0.03 - 0.55 um) Mixing Ratio (kg kg-1)
+AERMR04-KGKG;210004;;;
 
 # 210005:Dust Aerosol (0.55 - 0.9 um) Mixing Ratio (kg kg-1)
+AERMR05-KGKG;210005;;;
 
 # 210006:Dust Aerosol (0.9 - 20 um) Mixing Ratio (kg kg-1)
+AERMR06-KGKG;210006;;;
 
 # 210007:Hydrophilic Organic Matter Aerosol Mixing Ratio (kg kg-1)
+AERMR07-KGKG;210007;;;
 
 # 210008:Hydrophobic Organic Matter Aerosol Mixing Ratio (kg kg-1)
+AERMR08-KGKG;210008;;;
 
 # 210009:Hydrophilic Black Carbon Aerosol Mixing Ratio (kg kg-1)
+AERMR09-KGKG;210009;;;
 
 # 210010:Hydrophobic Black Carbon Aerosol Mixing Ratio (kg kg-1)
+AERMR10-KGKG;210010;;;
 
 # 210011:Sulphate Aerosol Mixing Ratio (kg kg-1)
+AERMR11-KGKG;210011;;;
 
 # 210012:SO2 precursor mixing ratio (kg kg-1)
 
@@ -4112,12 +4123,16 @@ PM10-KGM3;210074;;;
 # 210120:Altitude of plume top (m)
 
 # 210121:Nitrogen dioxide mass mixing ratio (kg kg-1)
+NO2-KGKG;210121;;;
 
 # 210122:Sulphur dioxide mass mixing ratio (kg kg-1)
+SO2-KGKG;210122;;;
 
 # 210123:Carbon monoxide mass mixing ratio (kg kg-1)
+CO-KGKG;210123;;;
 
 # 210124:Formaldehyde (kg kg-1)
+HCHO-KGKG;210124;;;
 
 # 210125:Total column Nitrogen dioxide (kg m-2)
 TCNO2-KGM2;210125;;;
@@ -4255,6 +4270,7 @@ TCHCHO-KGM2;210128;;;
 # 210197:Near IR albedo for diffuse radiation, geometric component  ((0 - 1))
 
 # 210203:Ozone mass mixing ratio (full chemistry scheme) (kg kg-1)
+GO3-KGKG;210203;;;
 
 # 210206:GEMS Total column ozone (kg m-2)
 GTCO3-KGM2;210206;;;
@@ -4351,10 +4367,13 @@ AOD340;210217;;;
 # 210246:Profile of total aerosol dry absorption coefficient (m-1)
 
 # 210247:Nitrate fine mode aerosol mass mixing ratio (kg kg-1)
+AERMR16-KGKG;210247;;;
 
 # 210248:Nitrate coarse mode aerosol mass mixing ratio (kg kg-1)
+AERMR17-KGKG;210248;;;
 
 # 210249:Ammonium aerosol mass mixing ratio (kg kg-1)
+AERMR18-KGKG;210249;;;
 
 # 210250:Nitrate aerosol optical depth at 550 nm (dimensionless)
 NIAOD550;210250;;;
@@ -6410,10 +6429,13 @@ AOT340;214052;;;
 # 216255:Experimental product (~)
 
 # 217003:Hydrogen peroxide (kg kg-1)
+H2O2-KGKG;217003;;;
 
 # 217004:Methane (chemistry) (kg kg-1)
+CH4_C-KGKG;217004;;;
 
 # 217006:Nitric acid (kg kg-1)
+HNO3-KGKG;217006;;;
 
 # 217007:Methyl peroxide (kg kg-1)
 
@@ -6426,12 +6448,14 @@ AOT340;214052;;;
 # 217012:Aldehydes (kg kg-1)
 
 # 217013:Peroxyacetyl nitrate (kg kg-1)
+PAN-KGKG;217013;;;
 
 # 217014:Peroxides (kg kg-1)
 
 # 217015:Organic nitrates (kg kg-1)
 
 # 217016:Isoprene (kg kg-1)
+C5H8-KGKG;217016;;;
 
 # 217018:Dimethyl sulfide (kg kg-1)
 
@@ -6450,12 +6474,14 @@ AOT340;214052;;;
 # 217026:Lead (kg kg-1)
 
 # 217027:Nitrogen monoxide mass mixing ratio (kg kg-1)
+NO-KGKG;217027;;;
 
 # 217028:Hydroperoxy radical (kg kg-1)
 
 # 217029:Methylperoxy radical (kg kg-1)
 
 # 217030:Hydroxyl radical (kg kg-1)
+OH-KGKG;217030;;;
 
 # 217032:Nitrate radical (kg kg-1)
 
@@ -6484,10 +6510,12 @@ AOT340;214052;;;
 # 217044:Methacrylic acid (kg kg-1)
 
 # 217045:Ethane (kg kg-1)
+C2H6-KGKG;217045;;;
 
 # 217046:Ethanol (kg kg-1)
 
 # 217047:Propane (kg kg-1)
+C3H8-KGKG;217047;;;
 
 # 217048:Propene (kg kg-1)
 
