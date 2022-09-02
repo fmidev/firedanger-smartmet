@@ -65,7 +65,7 @@ services:
   fminames-db:
     build: 
       context: ./fminames-db
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.8
     image: fminames-db:latest
     container_name: fminames-db
     restart: "no"
