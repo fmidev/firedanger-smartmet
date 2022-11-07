@@ -1,4 +1,4 @@
-# SmartMet-server for Hackathon in Chile
+# SmartMet-server for IBA Arctic wildfire preparedness project
 
 SmartMet Server is a data and product server which provides acces to both observation and forecast data. It is used for data services and product generation. Smartmet Server can read input from various sources and it provides several ouput interfaces and formats. For more detailed description, see the [SmartMet Server wiki pages](https://github.com/fmidev/smartmet-server/wiki).
 
