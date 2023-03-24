@@ -5,7 +5,7 @@ services:
     image: smartmet-server:latest
     build: 
       context: ./smartmet-server
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.8
     security_opt:
       - seccomp:unconfined
     container_name: smartmet-server
@@ -65,7 +65,7 @@ services:
   fminames-db:
     build: 
       context: ./fminames-db
-      dockerfile: Dockerfile.8
+      dockerfile: Dockerfile
     image: fminames-db:latest
     container_name: fminames-db
     restart: "no"

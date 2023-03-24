@@ -100,8 +100,8 @@ EXPOSE 8080
 #COPY smartmetconf /etc/smartmet
 #COPY wms /smartmet/share/wms
 #COPY docker-entrypoint.sh /
-RUN groupadd -r -g 5700 smartmet
-RUN useradd -r -u 4516 -g smartmet smartmet
+RUN groupadd -r -g 3610 smartmet
+RUN useradd -r -u 7994 -g smartmet smartmet
 
 # wms.conf defines imagecache. timeseriescache's use is yet to be found.
 # MS 6.3.20: from new Rauhala dockerhub code
