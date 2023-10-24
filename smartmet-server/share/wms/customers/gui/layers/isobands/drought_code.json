@@ -1,0 +1,42 @@
+[
+  {
+    "qid": "DroughtCode_800_1000",
+    "lolimit": 800,
+    "hilimit": 1000,
+    "attributes": {
+      "class": "DroughtCode_800_1000"
+    }
+  },
+  {
+    "qid": "DroughtCode_600_800",
+    "lolimit": 600,
+    "hilimit": 800,
+    "attributes": {
+      "class": "DroughtCode_600_800"
+    }
+  },
+  {
+    "qid": "DroughtCode_400_600",
+    "lolimit": 400,
+    "hilimit": 800,
+    "attributes": {
+      "class": "DroughtCode_400_600"
+    }
+  },
+  {
+    "qid": "DroughtCode_200_400",
+    "lolimit": 200,
+    "hilimit": 400,
+    "attributes": {
+      "class": "DroughtCode_200_400"
+    }
+  },
+  {
+    "qid": "DroughtCode_0_200",
+    "lolimit": 0,
+    "hilimit": 200,
+    "attributes": {
+      "class": "DroughtCode_0_200"
+    }
+  }
+]

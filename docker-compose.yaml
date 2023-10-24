@@ -109,7 +109,7 @@ services:
         ipv4_address: 172.18.0.4
     environment:
       UPSTREAM: 172.18.0.5:8080
-      SERVERNAME: smart.nsdc.fmi.fi
+      SERVERNAME: firedanger.nsdc.fmi.fi
     ports:
       - "80:80"
       - "443:443"
